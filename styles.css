@@ -37,57 +37,336 @@ img {
     src: url('Resources/Fonts/Fasthand-Regular.ttf');
 }
 
-.hello {
-    font-family: 'Permanent Marker', Arial, sans-serif;
-    font-size: 6rem;
+/**
+ * Basic CSS Media Query Template
+ * -------------------------------------------------------
+ *  Responsive Grid Media Queries - 1280, 1024, 768, 480
+ *   1280-1024   - desktop (default grid)
+ *   1024-768    - tablet landscape
+ *   768-480     - tablet 
+ *   480-less    - phone landscape & smaller
+ * -------------------------------------------------------
+ */
+
+/* Desktop Wide */
+@media only screen and (min-width: 1280px) {
+    .hello {
+        font-family: 'Permanent Marker', Arial, sans-serif;
+        font-size: 6rem;
+    }
+
+    .diagonal-column1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 500px;
+        height: 100%;
+        transform: skew(67deg);
+        background-color: gray;
+        overflow: hidden;
+    }
+
+    .diagonal-column2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        white-space: nowrap;
+        width: 500px;
+        height: 100%;
+        transform: skew(67deg);
+        background-color: orange;
+        overflow: hidden;
+    }
+
+    .diag-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        transform: skew(-67deg) rotateZ(23deg);
+        background-image: url("Resources/honeycomb.png");
+        background-position: center;
+        background-repeat: repeat-x;
+        background-size: contain;
+    }
+
+    .logo-section {
+        display: inline-flex;
+        justify-content: center;
+        align-content: center;
+        height: 100%;
+        margin-left: auto;
+        padding-top: 10rem;
+        padding-right: 10rem;
+    }
 }
 
-.diagonal-column1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 500px;
-    height: 100%;
-    transform: skew(67deg);
-    background-color: gray;
-    overflow: hidden;
+/* Desktop */
+@media only screen and (min-width: 1024px) and (max-width: 1280px) {
+    .hello {
+        font-family: 'Permanent Marker', Arial, sans-serif;
+        font-size: 6rem;
+    }
+
+    .diagonal-column1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 500px;
+        height: 100%;
+        transform: skew(50deg);
+        background-color: gray;
+        overflow: hidden;
+    }
+
+    .diagonal-column2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        white-space: nowrap;
+        width: 500px;
+        height: 100%;
+        transform: skew(50deg);
+        background-color: orange;
+        overflow: hidden;
+    }
+
+    .diag-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        transform: skew(-50deg) rotateZ(40.5deg);
+        background-image: url("Resources/honeycomb.png");
+        background-position: center;
+        background-repeat: repeat-x;
+        background-size: contain;
+    }
+
+    .logo-section {
+        display: inline-flex;
+        justify-content: center;
+        align-content: center;
+        height: 100%;
+        margin-left: auto;
+        padding-top: 10rem;
+        padding-right: 10rem;
+    }
 }
 
-.diagonal-column2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    white-space: nowrap;
-    width: 500px;
-    height: 100%;
-    transform: skew(67deg);
-    background-color: orange;
-    overflow: hidden;
+/* Tablet Landscape */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .hello {
+        font-family: 'Permanent Marker', Arial, sans-serif;
+        font-size: 6rem;
+    }
+
+    .diagonal-column1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 500px;
+        height: 100%;
+        transform: skew(40deg);
+        background-color: gray;
+        overflow: hidden;
+    }
+
+    .diagonal-column2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        white-space: nowrap;
+        width: 500px;
+        height: 100%;
+        transform: skew(40deg);
+        background-color: blue;
+        overflow: hidden;
+    }
+
+    .diag-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        transform: skew(-40deg) rotateZ(50deg);
+        background-image: url("Resources/honeycomb.png");
+        background-position: center;
+        background-repeat: repeat-x;
+        background-size: contain;
+    }
+
+    .logo-section {
+        display: inline-flex;
+        justify-content: center;
+        align-content: center;
+        height: 100%;
+        margin-left: auto;
+        padding-top: 10rem;
+        padding-right: 10rem;
+    }
 }
 
-.diag-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    transform: skew(-67deg) rotateZ(23deg);
-    background-image: url("Resources/honeycomb.png");
-    background-position: center;
-    background-repeat: repeat-x;
-    background-size: contain;
+/* Tablet */
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+    .hello {
+        font-family: 'Permanent Marker', Arial, sans-serif;
+        font-size: 6rem;
+    }
+
+    .diagonal-column1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 500px;
+        height: 100%;
+        transform: skew(0deg);
+        background-color: gray;
+        overflow: hidden;
+    }
+
+    .diagonal-column2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        white-space: nowrap;
+        width: 500px;
+        height: 100%;
+        transform: skew(0deg);
+        background-color: red;
+        overflow: hidden;
+    }
+
+    .diag-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        transform: rotateZ(60deg);
+        background-image: url("Resources/honeycomb.png");
+        background-position: center;
+        background-repeat: repeat-x;
+        background-size: contain;
+    }
+
+    .logo-section {
+        display: inline-flex;
+        justify-content: center;
+        align-content: center;
+        height: 100%;
+        margin-left: auto;
+        padding-top: 10rem;
+        padding-right: 10rem;
+    }
 }
 
-.logo-section {
-    display: inline-flex;
-    justify-content: center;
-    align-content: center;
-    height: 100%;
-    margin-left: auto;
-    padding-top: 10rem;
-    padding-right: 10rem;
+/* Phone Landscape and Smaller */
+@media only screen and (max-width: 480px) {
+    .hello {
+        font-family: 'Permanent Marker', Arial, sans-serif;
+        font-size: 6rem;
+    }
+
+    .diagonal-column1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 500px;
+        height: 100%;
+        /* transform: skew(67deg); */
+        background-color: gray;
+        overflow: hidden;
+    }
+
+    .diagonal-column2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        white-space: nowrap;
+        width: 500px;
+        height: 100%;
+        /* transform: skew(67deg); */
+        background-color: green;
+        overflow: hidden;
+    }
+
+    .diag-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        /* transform: skew(-67deg) rotateZ(23deg); */
+        background-image: url("Resources/honeycomb.png");
+        background-position: center;
+        background-repeat: repeat-x;
+        background-size: contain;
+    }
+
+    .logo-section {
+        display: inline-flex;
+        justify-content: center;
+        align-content: center;
+        height: 100%;
+        margin-left: auto;
+        padding-top: 10rem;
+        padding-right: 10rem;
+    }
 }
+
+/* Portrait */
+/* @media only screen and (orientation:portrait) { */
+    /* Portrait styles here */
+/* } */
+
+/* Landscape */
+/* @media only screen and (orientation:landscape) { */
+    /* Landscape styles here */
+/* } */
+
+/* CSS for iPhone, iPad, and Retina Displays */
+
+/* Non-Retina */
+/* @media only screen and (-webkit-max-device-pixel-ratio: 1) {} */
+
+/* Retina */
+/* @media only screen and (-webkit-min-device-pixel-ratio: 1.5), */
+/* only screen and (-o-min-device-pixel-ratio: 3/2), */
+/* only screen and (min--moz-device-pixel-ratio: 1.5), */
+/* only screen and (min-device-pixel-ratio: 1.5) {} */
+
+/* iPhone Portrait */
+/* @media only screen and (max-device-width: 480px) and (orientation:portrait) {} */
+
+/* iPhone Landscape */
+/* @media only screen and (max-device-width: 480px) and (orientation:landscape) {} */
+
+/* iPad Portrait */
+/* @media only screen and (min-device-width: 481px) and (orientation:portrait) {} */
+
+/* iPad Landscape */
+/* @media only screen and (min-device-width: 481px) and (orientation:landscape) {} */
