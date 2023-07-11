@@ -4,13 +4,7 @@ html {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    background-color: rgb(165, 69, 255);
-}
-
-footer {
-    display: flex;
-    top: 0;
-    right: 0;
+    background-color: black;
 }
 
 body {
@@ -24,6 +18,28 @@ body {
     height: 100%;
     width: 100%;
     overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+img {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+}
+
+@font-face {
+    font-family: 'Permanent Marker';
+    src: url('Resources/Fonts/PermanentMarker-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Fasthand';
+    src: url('Resources/Fonts/Fasthand-Regular.ttf');
+}
+
+.hello {
+    font-family: 'Permanent Marker', Arial, sans-serif;
+    font-size: 6rem;
 }
 
 .diagonal-column1 {
@@ -34,7 +50,7 @@ body {
     width: 500px;
     height: 100%;
     transform: skew(67deg);
-    background-color: orange;
+    background-color: gray;
     overflow: hidden;
 }
 
@@ -43,19 +59,35 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    white-space: nowrap;
     width: 500px;
     height: 100%;
     transform: skew(67deg);
-    background-color: blue;
+    background-color: orange;
     overflow: hidden;
 }
 
 .diag-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
     transform: skew(-67deg) rotateZ(23deg);
+    background-image: url("Resources/honeycomb.png");
+    background-position: center;
+    background-repeat: repeat-x;
+    background-size: contain;
 }
 
-.nav-section {
-    display: flex;
-    justify-content: end;
-    align-content: start;
+.logo-section {
+    display: inline-flex;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
+    margin-left: auto;
+    padding-top: 10rem;
+    padding-right: 10rem;
 }
