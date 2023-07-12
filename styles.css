@@ -22,9 +22,9 @@ body {
 }
 
 img {
-    height: 300px;
+    height: 350px;
     width: 300px;
-    border-radius: 50%;
+    /* border-radius: 50%; */
 }
 
 @font-face {
@@ -60,7 +60,7 @@ img {
         justify-content: center;
         align-items: center;
         text-align: center;
-        width: 500px;
+        width: 40rem;
         height: 100%;
         transform: skew(67deg);
         background-color: gray;
@@ -73,7 +73,7 @@ img {
         align-items: center;
         text-align: center;
         white-space: nowrap;
-        width: 500px;
+        width: 40rem;
         height: 100%;
         transform: skew(67deg);
         background-color: orange;
@@ -107,7 +107,7 @@ img {
 }
 
 /* Desktop */
-@media only screen and (min-width: 1024px) and (max-width: 1280px) {
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
     .hello {
         font-family: 'Permanent Marker', Arial, sans-serif;
         font-size: 6rem;
@@ -118,7 +118,7 @@ img {
         justify-content: center;
         align-items: center;
         text-align: center;
-        width: 500px;
+        width: 40rem;
         height: 100%;
         transform: skew(50deg);
         background-color: gray;
@@ -131,7 +131,7 @@ img {
         align-items: center;
         text-align: center;
         white-space: nowrap;
-        width: 500px;
+        width: 40rem;
         height: 100%;
         transform: skew(50deg);
         background-color: orange;
@@ -165,7 +165,7 @@ img {
 }
 
 /* Tablet Landscape */
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
     .hello {
         font-family: 'Permanent Marker', Arial, sans-serif;
         font-size: 6rem;
@@ -176,7 +176,7 @@ img {
         justify-content: center;
         align-items: center;
         text-align: center;
-        width: 500px;
+        width: 40rem;
         height: 100%;
         transform: skew(40deg);
         background-color: gray;
@@ -189,7 +189,7 @@ img {
         align-items: center;
         text-align: center;
         white-space: nowrap;
-        width: 500px;
+        width: 40rem;
         height: 100%;
         transform: skew(40deg);
         background-color: blue;
@@ -223,7 +223,7 @@ img {
 }
 
 /* Tablet */
-@media only screen and (min-width: 480px) and (max-width: 768px) {
+@media only screen and (min-width: 480px) and (max-width: 767px) {
     .hello {
         font-family: 'Permanent Marker', Arial, sans-serif;
         font-size: 6rem;
@@ -234,7 +234,7 @@ img {
         justify-content: center;
         align-items: center;
         text-align: center;
-        width: 500px;
+        width: 40rem;
         height: 100%;
         transform: skew(0deg);
         background-color: gray;
@@ -247,7 +247,7 @@ img {
         align-items: center;
         text-align: center;
         white-space: nowrap;
-        width: 500px;
+        width: 40rem;
         height: 100%;
         transform: skew(0deg);
         background-color: red;
@@ -281,9 +281,9 @@ img {
 }
 
 /* Phone Landscape and Smaller */
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 479px) {
     .hello {
-        font-family: 'Permanent Marker', Arial, sans-serif;
+        font-family: 'fasthand', Arial, sans-serif;
         font-size: 6rem;
     }
 
@@ -292,9 +292,8 @@ img {
         justify-content: center;
         align-items: center;
         text-align: center;
-        width: 500px;
+        width: 4rem;
         height: 100%;
-        /* transform: skew(67deg); */
         background-color: gray;
         overflow: hidden;
     }
@@ -305,9 +304,8 @@ img {
         align-items: center;
         text-align: center;
         white-space: nowrap;
-        width: 500px;
+        width: 4rem;
         height: 100%;
-        /* transform: skew(67deg); */
         background-color: green;
         overflow: hidden;
     }
@@ -320,7 +318,6 @@ img {
         width: 100%;
         margin: 0;
         padding: 0;
-        /* transform: skew(-67deg) rotateZ(23deg); */
         background-image: url("Resources/honeycomb.png");
         background-position: center;
         background-repeat: repeat-x;
