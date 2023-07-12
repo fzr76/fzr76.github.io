@@ -7,26 +7,6 @@ html {
     background-color: black;
 }
 
-body {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    overflow-x: hidden;
-    overflow-y: hidden;
-}
-
-img {
-    height: 350px;
-    width: 300px;
-    /* border-radius: 50%; */
-}
-
 @font-face {
     font-family: 'Permanent Marker';
     src: url('Resources/Fonts/PermanentMarker-Regular.ttf');
@@ -50,6 +30,25 @@ img {
 
 /* Desktop Wide */
 @media only screen and (min-width: 1280px) {
+    body {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+
+    img {
+        height: 350px;
+        width: 300px;
+    }
+
     .hello {
         font-family: 'Permanent Marker', Arial, sans-serif;
         font-size: 6rem;
@@ -108,6 +107,25 @@ img {
 
 /* Desktop */
 @media only screen and (min-width: 1024px) and (max-width: 1279px) {
+    body {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+
+    img {
+        height: 350px;
+        width: 300px;
+    }
+
     .hello {
         font-family: 'Permanent Marker', Arial, sans-serif;
         font-size: 6rem;
@@ -166,6 +184,25 @@ img {
 
 /* Tablet Landscape */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    body {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+
+    img {
+        height: 350px;
+        width: 300px;
+    }
+
     .hello {
         font-family: 'Permanent Marker', Arial, sans-serif;
         font-size: 6rem;
@@ -224,6 +261,25 @@ img {
 
 /* Tablet */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
+    body {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+
+    img {
+        height: 350px;
+        width: 300px;
+    }
+
     .hello {
         font-family: 'Permanent Marker', Arial, sans-serif;
         font-size: 6rem;
@@ -235,6 +291,7 @@ img {
         align-items: center;
         text-align: center;
         width: 40rem;
+        /* width: 20%; */
         height: 100%;
         transform: skew(0deg);
         background-color: gray;
@@ -248,6 +305,7 @@ img {
         text-align: center;
         white-space: nowrap;
         width: 40rem;
+        /* width: 20%; */
         height: 100%;
         transform: skew(0deg);
         background-color: red;
@@ -282,31 +340,54 @@ img {
 
 /* Phone Landscape and Smaller */
 @media only screen and (max-width: 479px) {
-    .hello {
-        font-family: 'fasthand', Arial, sans-serif;
-        font-size: 6rem;
+    body {
+        display: grid;
+        grid-template-areas: "nav" "nav"
+            "left" "right"
+            "footer" "footer";
+        grid-template: 3 / 2;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        overflow-x: hidden;
+        overflow-y: hidden;
     }
 
-    .diagonal-column1 {
+    img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 35px;
+        width: 30px;
+    }
+
+    .hello {
+        font-family: 'fasthand', Arial, sans-serif;
+        font-size: 2rem;
+    }
+
+    .nav {
         display: flex;
         justify-content: center;
         align-items: center;
         text-align: center;
-        width: 4rem;
-        height: 100%;
+        width: 100%;
+        height: 4rem;
+        transform: skew(40deg);
         background-color: gray;
         overflow: hidden;
     }
 
-    .diagonal-column2 {
+    .left {
         display: flex;
         justify-content: center;
         align-items: center;
         text-align: center;
         white-space: nowrap;
-        width: 4rem;
+        width: 100%;
         height: 100%;
-        background-color: green;
+        transform: skew(40deg);
+        background-color: purple;
         overflow: hidden;
     }
 
@@ -318,13 +399,14 @@ img {
         width: 100%;
         margin: 0;
         padding: 0;
+        transform: skew(-40deg);
         background-image: url("Resources/honeycomb.png");
         background-position: center;
         background-repeat: repeat-x;
         background-size: contain;
     }
 
-    .logo-section {
+    /* .logo-section {
         display: inline-flex;
         justify-content: center;
         align-content: center;
@@ -332,17 +414,17 @@ img {
         margin-left: auto;
         padding-top: 10rem;
         padding-right: 10rem;
-    }
+    } */
 }
 
 /* Portrait */
 /* @media only screen and (orientation:portrait) { */
-    /* Portrait styles here */
+/* Portrait styles here */
 /* } */
 
 /* Landscape */
 /* @media only screen and (orientation:landscape) { */
-    /* Landscape styles here */
+/* Landscape styles here */
 /* } */
 
 /* CSS for iPhone, iPad, and Retina Displays */
@@ -367,3 +449,77 @@ img {
 
 /* iPad Landscape */
 /* @media only screen and (min-device-width: 481px) and (orientation:landscape) {} */
+
+
+
+
+
+/* Hamburger menu code. Move as needed  */
+
+:root {
+    --bar-width: 60px;
+    --bar-height: 8px;
+    --hamburger-gap: 6px;
+    --foreground: #333;
+    --background: white;
+    --hamburger-margin: 0.5rem;
+    --animation-timing: 200ms ease-in-out;
+    --hamburger-height: calc(var(--bar-height) * 3 + (var(--hamburger-gap) * 2));
+}
+
+
+.hamburger-menu {
+    --x-width: calc(var(--hamburger-height) * 1.41421356237);
+    display: flex;
+    flex-direction: column;
+    gap: var(--hamburger-gap);
+    width: max-content;
+    position: absolute;
+    top: var(--hamburger-margin);
+    left: var(--hamburger-margin);
+    z-index: 999;
+    cursor: pointer;
+}
+
+.hamburger-menu::before,
+.hamburger-menu::after,
+.hamburger-menu input {
+    content: "";
+    width: var(--bar-width);
+    height: var(--bar-height);
+    background-color: var(--foreground);
+    border-radius: 9999px;
+    transform-origin: left center;
+    transition: opacity var(--animation-timing), width var(--animation-timing), rotate var(--animation-timing), translate var(--animation-timing), background-color var(--animation-timing);
+}
+
+.hamburger-menu input {
+    appearance: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    pointer-events: none;
+}
+
+.hamburger-menu:has(input:checked)::before {
+    rotate: 45deg;
+    width: var(--x-width);
+    translate: 0 calc(var(--bar-height) / -2);
+}
+
+.hamburger-menu:has(input:checked)::after {
+    rotate: -45deg;
+    width: var(--x-width);
+    translate: 0 calc(var(--bar-height) / 2);
+}
+
+.hamburger-menu input:checked {
+    opacity: 0;
+    width: 0;
+}
+
+.sidebar {
+    translate: -100%;
+}
+
+/* https://www.youtube.com/watch?v=dAIVbLrAb_U */
