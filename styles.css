@@ -1,10 +1,26 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
 html {
+    scroll-behavior: smooth;
     height: 100%;
     width: 100%;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
     background-color: black;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: white;
 }
 
 @font-face {
@@ -47,6 +63,10 @@ html {
     img {
         height: 350px;
         width: 300px;
+    }
+
+    .mobileLogo {
+        display: none; 
     }
 
     .hello {
@@ -103,6 +123,10 @@ html {
         padding-top: 10rem;
         padding-right: 10rem;
     }
+
+    .hamburger-menu {
+        display: none;
+    }
 }
 
 /* Desktop */
@@ -125,6 +149,11 @@ html {
         height: 350px;
         width: 300px;
     }
+
+    .mobileLogo {
+        display: none; 
+    }
+
 
     .hello {
         font-family: 'Permanent Marker', Arial, sans-serif;
@@ -180,177 +209,29 @@ html {
         padding-top: 10rem;
         padding-right: 10rem;
     }
+
+    .hamburger-menu {
+        display: none;
+    }
 }
 
 /* Tablet Landscape */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
     body {
-        display: flex;
-        justify-content: left;
-        align-items: center;
-        margin: 0;
-        padding: 0;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        overflow-x: hidden;
-        overflow-y: hidden;
-    }
-
-    img {
-        height: 350px;
-        width: 300px;
-    }
-
-    .hello {
-        font-family: 'Permanent Marker', Arial, sans-serif;
-        font-size: 6rem;
-    }
-
-    .diagonal-column1 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        width: 40rem;
-        height: 100%;
-        transform: skew(40deg);
-        background-color: gray;
-        overflow: hidden;
-    }
-
-    .diagonal-column2 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        white-space: nowrap;
-        width: 40rem;
-        height: 100%;
-        transform: skew(40deg);
-        background-color: blue;
-        overflow: hidden;
-    }
-
-    .diag-content {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        transform: skew(-40deg) rotateZ(50deg);
-        background-image: url("Resources/honeycomb.png");
-        background-position: center;
-        background-repeat: repeat-x;
-        background-size: contain;
-    }
-
-    .logo-section {
-        display: inline-flex;
-        justify-content: center;
-        align-content: center;
-        height: 100%;
-        margin-left: auto;
-        padding-top: 10rem;
-        padding-right: 10rem;
-    }
-}
-
-/* Tablet */
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-    body {
-        display: flex;
-        justify-content: left;
-        align-items: center;
-        margin: 0;
-        padding: 0;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        overflow-x: hidden;
-        overflow-y: hidden;
-    }
-
-    img {
-        height: 350px;
-        width: 300px;
-    }
-
-    .hello {
-        font-family: 'Permanent Marker', Arial, sans-serif;
-        font-size: 6rem;
-    }
-
-    .diagonal-column1 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        width: 40rem;
-        /* width: 20%; */
-        height: 100%;
-        transform: skew(0deg);
-        background-color: gray;
-        overflow: hidden;
-    }
-
-    .diagonal-column2 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        white-space: nowrap;
-        width: 40rem;
-        /* width: 20%; */
-        height: 100%;
-        transform: skew(0deg);
-        background-color: red;
-        overflow: hidden;
-    }
-
-    .diag-content {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        transform: rotateZ(60deg);
-        background-image: url("Resources/honeycomb.png");
-        background-position: center;
-        background-repeat: repeat-x;
-        background-size: contain;
-    }
-
-    .logo-section {
-        display: inline-flex;
-        justify-content: center;
-        align-content: center;
-        height: 100%;
-        margin-left: auto;
-        padding-top: 10rem;
-        padding-right: 10rem;
-    }
-}
-
-/* Phone Landscape and Smaller */
-@media only screen and (max-width: 479px) {
-    body {
         display: grid;
-        grid-template-areas: "nav" "nav"
-            "left" "right"
-            "footer" "footer";
-        grid-template: 3 / 2;
+        grid-template-areas: "nav"
+            "center"
+            "footer";
+        grid-template: 3 / 1;
         margin: 0;
         padding: 0;
         width: 100%;
         overflow-x: hidden;
         overflow-y: hidden;
+    }
+
+    aside {
+        height: 100%;
     }
 
     img {
@@ -361,52 +242,36 @@ html {
         width: 30px;
     }
 
+    .desktopLogo {
+        display: none; 
+    }
+
     .hello {
         font-family: 'fasthand', Arial, sans-serif;
         font-size: 2rem;
     }
 
-    .nav {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        width: 100%;
-        height: 4rem;
-        transform: skew(40deg);
-        background-color: gray;
-        overflow: hidden;
-    }
-
-    .left {
+    .center {
         display: flex;
         justify-content: center;
         align-items: center;
         text-align: center;
         white-space: nowrap;
+        margin-top: 3.5rem;
+        padding: 10rem;
         width: 100%;
         height: 100%;
-        transform: skew(40deg);
-        background-color: purple;
+        background-color: orange;
         overflow: hidden;
     }
 
     .diag-content {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        width: 100%;
         margin: 0;
         padding: 0;
-        transform: skew(-40deg);
-        background-image: url("Resources/honeycomb.png");
-        background-position: center;
-        background-repeat: repeat-x;
-        background-size: contain;
     }
 
-    /* .logo-section {
+    .logo-section {
         display: inline-flex;
         justify-content: center;
         align-content: center;
@@ -414,7 +279,424 @@ html {
         margin-left: auto;
         padding-top: 10rem;
         padding-right: 10rem;
-    } */
+    }
+
+    /* Hamburger Menu Code for mobile devices */
+
+    :root {
+        --bar-width: 60px;
+        --bar-height: 8px;
+        --hamburger-gap: 6px;
+        --foreground: #333;
+        --background: white;
+        --hamburger-margin: 8px;
+        --animation-timing: 400ms ease-in-out;
+        --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+    }
+
+    .hamburger-menu {
+        --x-width: calc(var(--hamburger-height) * 1.41421356237);
+
+        display: flex;
+        flex-direction: column;
+        gap: var(--hamburger-gap);
+        width: max-content;
+        position: absolute;
+        top: var(--hamburger-margin);
+        left: var(--hamburger-margin);
+        z-index: 2;
+        cursor: pointer;
+    }
+
+    .hamburger-menu:has(input:checked) {
+        --foreground: white;
+        --background: #333;
+    }
+
+    .hamburger-menu:has(input:focus-visible)::before,
+    .hamburger-menu:has(input:focus-visible)::after,
+    .hamburger-menu input:focus-visible {
+        border: 1px solid var(--background);
+        box-shadow: 0 0 0 1px var(--foreground);
+    }
+
+    .hamburger-menu::before,
+    .hamburger-menu::after,
+    .hamburger-menu input {
+        content: "";
+        width: var(--bar-width);
+        height: var(--bar-height);
+        background-color: var(--foreground);
+        border-radius: 9999px;
+        transform-origin: left center;
+        transition: opacity var(--animation-timing), width var(--animation-timing),
+            rotate var(--animation-timing), translate var(--animation-timing),
+            background-color var(--animation-timing);
+    }
+
+    .hamburger-menu input {
+        appearance: none;
+        padding: 0;
+        margin: 0;
+        outline: none;
+        pointer-events: none;
+    }
+
+    .hamburger-menu:has(input:checked)::before {
+        rotate: 45deg;
+        width: var(--x-width);
+        translate: 0 calc(var(--bar-height) / -2);
+    }
+
+    .hamburger-menu:has(input:checked)::after {
+        rotate: -45deg;
+        width: var(--x-width);
+        translate: 0 calc(var(--bar-height) / 2);
+    }
+
+    .hamburger-menu input:checked {
+        opacity: 0;
+        width: 0;
+    }
+
+    .sidebar {
+        position: fixed;
+        transform: translateX(-100%);
+        transition: transform var(--animation-timing);
+        padding: 0.5rem 1rem;
+        padding-top: calc(var(--hamburger-height) + var(--hamburger-margin) + 1rem);
+        background-color: var(--foreground);
+        color: var(--background);
+        min-width: 100vw;
+        min-height: 100vh;
+        
+    }
+
+    .hamburger-menu:has(input:checked)+.sidebar {
+        transform: translateX(0);
+    }
+}
+
+/* Tablet */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    body {
+        display: grid;
+        grid-template-areas: "nav"
+            "center"
+            "footer";
+        grid-template: 3 / 1;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+
+    aside {
+        height: 100%;
+    }
+
+    img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 35px;
+        width: 30px;
+    }
+
+    .desktopLogo {
+        display: none; 
+    }
+
+    .hello {
+        font-family: 'fasthand', Arial, sans-serif;
+        font-size: 2rem;
+    }
+
+    .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        white-space: nowrap;
+        margin-top: 3.5rem;
+        padding: 10rem;
+        width: 100%;
+        height: 100%;
+        background-color: orange;
+        overflow: hidden;
+    }
+
+    .diag-content {
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
+
+    .logo-section {
+        display: inline-flex;
+        justify-content: center;
+        align-content: center;
+        height: 100%;
+        margin-left: auto;
+        padding-top: 10rem;
+        padding-right: 10rem;
+    }
+
+    /* Hamburger Menu Code for mobile devices */
+
+    :root {
+        --bar-width: 60px;
+        --bar-height: 8px;
+        --hamburger-gap: 6px;
+        --foreground: #333;
+        --background: white;
+        --hamburger-margin: 8px;
+        --animation-timing: 400ms ease-in-out;
+        --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+    }
+
+    .hamburger-menu {
+        --x-width: calc(var(--hamburger-height) * 1.41421356237);
+
+        display: flex;
+        flex-direction: column;
+        gap: var(--hamburger-gap);
+        width: max-content;
+        position: absolute;
+        top: var(--hamburger-margin);
+        left: var(--hamburger-margin);
+        z-index: 2;
+        cursor: pointer;
+    }
+
+    .hamburger-menu:has(input:checked) {
+        --foreground: white;
+        --background: #333;
+    }
+
+    .hamburger-menu:has(input:focus-visible)::before,
+    .hamburger-menu:has(input:focus-visible)::after,
+    .hamburger-menu input:focus-visible {
+        border: 1px solid var(--background);
+        box-shadow: 0 0 0 1px var(--foreground);
+    }
+
+    .hamburger-menu::before,
+    .hamburger-menu::after,
+    .hamburger-menu input {
+        content: "";
+        width: var(--bar-width);
+        height: var(--bar-height);
+        background-color: var(--foreground);
+        border-radius: 9999px;
+        transform-origin: left center;
+        transition: opacity var(--animation-timing), width var(--animation-timing),
+            rotate var(--animation-timing), translate var(--animation-timing),
+            background-color var(--animation-timing);
+    }
+
+    .hamburger-menu input {
+        appearance: none;
+        padding: 0;
+        margin: 0;
+        outline: none;
+        pointer-events: none;
+    }
+
+    .hamburger-menu:has(input:checked)::before {
+        rotate: 45deg;
+        width: var(--x-width);
+        translate: 0 calc(var(--bar-height) / -2);
+    }
+
+    .hamburger-menu:has(input:checked)::after {
+        rotate: -45deg;
+        width: var(--x-width);
+        translate: 0 calc(var(--bar-height) / 2);
+    }
+
+    .hamburger-menu input:checked {
+        opacity: 0;
+        width: 0;
+    }
+
+    .sidebar {
+        position: fixed;
+        transform: translateX(-100%);
+        transition: transform var(--animation-timing);
+        padding: 0.5rem 1rem;
+        padding-top: calc(var(--hamburger-height) + var(--hamburger-margin) + 1rem);
+        background-color: var(--foreground);
+        color: var(--background);
+        min-width: 100vw;
+        min-height: 100vh;
+        
+    }
+
+    .hamburger-menu:has(input:checked)+.sidebar {
+        transform: translateX(0);
+    }
+}
+
+/* Phone Landscape and Smaller */
+@media only screen and (max-width: 479px) {
+    body {
+        display: grid;
+        grid-template-areas: "nav"
+            "center"
+            "footer";
+        grid-template: 3 / 1;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+
+    aside {
+        height: 100%;
+    }
+
+    img {
+        height: 55px;
+        width: 50px;
+    }
+
+    .desktopLogo {
+        display: none; 
+    }
+
+    .hello {
+        font-family: 'fasthand', Arial, sans-serif;
+        font-size: 2rem;
+    }
+
+    .center {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        white-space: nowrap;
+        margin-top: 3.5rem;
+        padding: 10rem;
+        width: 100%;
+        height: 100%;
+        background-color: orange;
+        overflow: hidden;
+    }
+
+    .diag-content {
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
+
+    .logo-section {
+        display: inline-flex;
+        justify-content: center;
+        align-content: center;
+        height: 100%;
+        margin-left: auto;
+        padding-top: 10rem;
+        padding-right: 10rem;
+    }
+
+    /* Hamburger Menu Code for mobile devices */
+
+    :root {
+        --bar-width: 60px;
+        --bar-height: 8px;
+        --hamburger-gap: 6px;
+        --foreground: #333;
+        --background: white;
+        --hamburger-margin: 8px;
+        --animation-timing: 400ms ease-in-out;
+        --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+    }
+
+    .hamburger-menu {
+        --x-width: calc(var(--hamburger-height) * 1.41421356237);
+
+        display: flex;
+        flex-direction: column;
+        gap: var(--hamburger-gap);
+        width: max-content;
+        position: absolute;
+        top: var(--hamburger-margin);
+        left: var(--hamburger-margin);
+        z-index: 2;
+        cursor: pointer;
+    }
+
+    .hamburger-menu:has(input:checked) {
+        --foreground: white;
+        --background: #333;
+    }
+
+    .hamburger-menu:has(input:focus-visible)::before,
+    .hamburger-menu:has(input:focus-visible)::after,
+    .hamburger-menu input:focus-visible {
+        border: 1px solid var(--background);
+        box-shadow: 0 0 0 1px var(--foreground);
+    }
+
+    .hamburger-menu::before,
+    .hamburger-menu::after,
+    .hamburger-menu input {
+        content: "";
+        width: var(--bar-width);
+        height: var(--bar-height);
+        background-color: var(--foreground);
+        border-radius: 9999px;
+        transform-origin: left center;
+        transition: opacity var(--animation-timing), width var(--animation-timing),
+            rotate var(--animation-timing), translate var(--animation-timing),
+            background-color var(--animation-timing);
+    }
+
+    .hamburger-menu input {
+        appearance: none;
+        padding: 0;
+        margin: 0;
+        outline: none;
+        pointer-events: none;
+    }
+
+    .hamburger-menu:has(input:checked)::before {
+        rotate: 45deg;
+        width: var(--x-width);
+        translate: 0 calc(var(--bar-height) / -2);
+    }
+
+    .hamburger-menu:has(input:checked)::after {
+        rotate: -45deg;
+        width: var(--x-width);
+        translate: 0 calc(var(--bar-height) / 2);
+    }
+
+    .hamburger-menu input:checked {
+        opacity: 0;
+        width: 0;
+    }
+
+    .sidebar {
+        position: fixed;
+        transform: translateX(-100%);
+        transition: transform var(--animation-timing);
+        padding: 0.5rem 1rem;
+        padding-top: calc(var(--hamburger-height) + var(--hamburger-margin) + 1rem);
+        background-color: var(--foreground);
+        color: var(--background);
+        min-width: 100vw;
+        min-height: 100vh;
+        
+    }
+
+    .hamburger-menu:has(input:checked)+.sidebar {
+        transform: translateX(0);
+    }
 }
 
 /* Portrait */
@@ -449,77 +731,3 @@ html {
 
 /* iPad Landscape */
 /* @media only screen and (min-device-width: 481px) and (orientation:landscape) {} */
-
-
-
-
-
-/* Hamburger menu code. Move as needed  */
-
-:root {
-    --bar-width: 60px;
-    --bar-height: 8px;
-    --hamburger-gap: 6px;
-    --foreground: #333;
-    --background: white;
-    --hamburger-margin: 0.5rem;
-    --animation-timing: 200ms ease-in-out;
-    --hamburger-height: calc(var(--bar-height) * 3 + (var(--hamburger-gap) * 2));
-}
-
-
-.hamburger-menu {
-    --x-width: calc(var(--hamburger-height) * 1.41421356237);
-    display: flex;
-    flex-direction: column;
-    gap: var(--hamburger-gap);
-    width: max-content;
-    position: absolute;
-    top: var(--hamburger-margin);
-    left: var(--hamburger-margin);
-    z-index: 999;
-    cursor: pointer;
-}
-
-.hamburger-menu::before,
-.hamburger-menu::after,
-.hamburger-menu input {
-    content: "";
-    width: var(--bar-width);
-    height: var(--bar-height);
-    background-color: var(--foreground);
-    border-radius: 9999px;
-    transform-origin: left center;
-    transition: opacity var(--animation-timing), width var(--animation-timing), rotate var(--animation-timing), translate var(--animation-timing), background-color var(--animation-timing);
-}
-
-.hamburger-menu input {
-    appearance: none;
-    padding: 0;
-    margin: 0;
-    outline: none;
-    pointer-events: none;
-}
-
-.hamburger-menu:has(input:checked)::before {
-    rotate: 45deg;
-    width: var(--x-width);
-    translate: 0 calc(var(--bar-height) / -2);
-}
-
-.hamburger-menu:has(input:checked)::after {
-    rotate: -45deg;
-    width: var(--x-width);
-    translate: 0 calc(var(--bar-height) / 2);
-}
-
-.hamburger-menu input:checked {
-    opacity: 0;
-    width: 0;
-}
-
-.sidebar {
-    translate: -100%;
-}
-
-/* https://www.youtube.com/watch?v=dAIVbLrAb_U */
