@@ -69,6 +69,7 @@ nav {
     background-color: orange;
     overflow: hidden;
     animation: slideInFromLeft 2s forwards;
+    animation-delay: 4s;
 }
 
 .logo-container {
@@ -100,6 +101,45 @@ nav {
     width: 15%;
     margin-top: 2rem;
 }
+
+/* This section is for the loading overlay screen */
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: orange;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 1000;
+    font-family: 'Courier New', monospace;
+    font-size: 2em;
+    color: black;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.blinking {
+    animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 
 /**
  * Basic CSS Media Query Template
@@ -170,6 +210,7 @@ nav {
         /* margin-bottom: 10rem; */
         transform: skewY(20deg) translate3d(-100%, -100%, 0);
         animation: slideIn 2s forwards;
+        animation-delay: 4s;
         background-color: gray;
         overflow: hidden;
     }
@@ -184,6 +225,7 @@ nav {
         margin-top: 15rem;
         transform: skewY(20deg) translate3d(-100%, -100%, 0);
         animation: slideIn 2s forwards;
+        animation-delay: 4s;
         background-color: orange;
         overflow: hidden;
     }
@@ -198,6 +240,7 @@ nav {
         padding: 0;
         transform: skewY(-20deg) rotateZ(20deg) translate3d(100%, 100%, 0);
         animation: slideInContent 2s forwards;
+        animation-delay: 4s;
         background-image: url("Resources/honeycomb.png");
         background-position: center;
         background-repeat: repeat-x;
@@ -267,6 +310,7 @@ nav {
         /* margin-bottom: 10rem; */
         transform: skewY(20deg) translate3d(-100%, -100%, 0);
         animation: slideIn 2s forwards;
+        animation-delay: 4s;
         background-color: gray;
         overflow: hidden;
     }
@@ -280,6 +324,7 @@ nav {
         height: 100%;
         transform: skewY(20deg) translate3d(-100%, -100%, 0);
         animation: slideIn 2s forwards;
+        animation-delay: 4s;
         margin-top: 10rem;
         background-color: orange;
         overflow: hidden;
@@ -295,6 +340,7 @@ nav {
         padding: 0;
         transform: skewY(-20deg) rotateZ(20deg) translate3d(100%, 100%, 0);
         animation: slideInContent 2s forwards;
+        animation-delay: 4s;
         background-image: url("Resources/honeycomb.png");
         background-position: center;
         background-repeat: repeat-x;
