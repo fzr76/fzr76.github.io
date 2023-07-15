@@ -34,17 +34,41 @@ nav {
     src: url('Resources/Fonts/Fasthand-Regular.ttf');
 }
 
+@keyframes slideIn {
+    to {
+        transform: skewY(20deg) translate3d(0, 0, 0);
+    }
+}
+
+@keyframes slideInContent {
+    to {
+        transform: skewY(-20deg) rotateZ(20deg) translate3d(0, 0, 0);
+    }
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 .center {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    /* padding: 2rem; */
     width: 100%;
     height: 100%;
     background-color: orange;
     overflow: hidden;
+    animation: slideInFromLeft 2s forwards;
 }
 
 .logo-container {
@@ -128,7 +152,7 @@ nav {
     }
 
     .mobileHide {
-        display: none; 
+        display: none;
     }
 
     .hello {
@@ -144,7 +168,8 @@ nav {
         width: 100%;
         height: 100%;
         /* margin-bottom: 10rem; */
-        transform: skewY(20deg);
+        transform: skewY(20deg) translate3d(-100%, -100%, 0);
+        animation: slideIn 2s forwards;
         background-color: gray;
         overflow: hidden;
     }
@@ -157,7 +182,8 @@ nav {
         width: 100%;
         height: 100%;
         margin-top: 15rem;
-        transform: skewY(20deg);
+        transform: skewY(20deg) translate3d(-100%, -100%, 0);
+        animation: slideIn 2s forwards;
         background-color: orange;
         overflow: hidden;
     }
@@ -170,7 +196,8 @@ nav {
         width: 100%;
         margin: 0;
         padding: 0;
-        transform: skewY(-20deg) rotateZ(20deg);
+        transform: skewY(-20deg) rotateZ(20deg) translate3d(100%, 100%, 0);
+        animation: slideInContent 2s forwards;
         background-image: url("Resources/honeycomb.png");
         background-position: center;
         background-repeat: repeat-x;
@@ -222,7 +249,7 @@ nav {
     }
 
     .mobileHide {
-        display: none; 
+        display: none;
     }
 
     .hello {
@@ -238,7 +265,8 @@ nav {
         width: 100%;
         height: 100%;
         /* margin-bottom: 10rem; */
-        transform: skewY(20deg);
+        transform: skewY(20deg) translate3d(-100%, -100%, 0);
+        animation: slideIn 2s forwards;
         background-color: gray;
         overflow: hidden;
     }
@@ -250,8 +278,9 @@ nav {
         text-align: center;
         width: 100%;
         height: 100%;
+        transform: skewY(20deg) translate3d(-100%, -100%, 0);
+        animation: slideIn 2s forwards;
         margin-top: 10rem;
-        transform: skewY(20deg);
         background-color: orange;
         overflow: hidden;
     }
@@ -264,7 +293,8 @@ nav {
         width: 100%;
         margin: 0;
         padding: 0;
-        transform: skewY(-20deg) rotateZ(20deg);
+        transform: skewY(-20deg) rotateZ(20deg) translate3d(100%, 100%, 0);
+        animation: slideInContent 2s forwards;
         background-image: url("Resources/honeycomb.png");
         background-position: center;
         background-repeat: repeat-x;
@@ -301,7 +331,7 @@ nav {
     }
 
     .desktopHide {
-        display: none; 
+        display: none;
     }
 
     .hello {
@@ -397,7 +427,7 @@ nav {
         color: var(--background);
         min-width: 100vw;
         min-height: 100vh;
-        
+
     }
 
     .hamburger-menu:has(input:checked)+.sidebar {
@@ -430,7 +460,7 @@ nav {
     }
 
     .desktopHide {
-        display: none; 
+        display: none;
     }
 
     .hello {
@@ -526,7 +556,7 @@ nav {
         color: var(--background);
         min-width: 100vw;
         min-height: 100vh;
-        
+
     }
 
     .hamburger-menu:has(input:checked)+.sidebar {
@@ -559,7 +589,7 @@ nav {
     }
 
     .desktopHide {
-        display: none; 
+        display: none;
     }
 
     .hello {
@@ -655,7 +685,7 @@ nav {
         color: var(--background);
         min-width: 100vw;
         min-height: 100vh;
-        
+
     }
 
     .hamburger-menu:has(input:checked)+.sidebar {
