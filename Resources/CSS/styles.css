@@ -26,12 +26,12 @@ nav {
 
 @font-face {
     font-family: 'Permanent Marker';
-    src: url('Resources/Fonts/PermanentMarker-Regular.ttf');
+    src: url('../Fonts/PermanentMarker-Regular.ttf');
 }
 
 @font-face {
     font-family: 'Fasthand';
-    src: url('Resources/Fonts/Fasthand-Regular.ttf');
+    src: url('../Fonts/Fasthand-Regular.ttf');
 }
 
 @keyframes slideIn {
@@ -362,7 +362,7 @@ nav {
         position: absolute;
         top: var(--hamburger-margin);
         left: var(--hamburger-margin);
-        z-index: 2;
+        z-index: 999;
         cursor: pointer;
     }
 
@@ -427,7 +427,7 @@ nav {
         color: var(--background);
         min-width: 100vw;
         min-height: 100vh;
-
+        z-index: 998;
     }
 
     .hamburger-menu:has(input:checked)+.sidebar {
@@ -491,7 +491,7 @@ nav {
         position: absolute;
         top: var(--hamburger-margin);
         left: var(--hamburger-margin);
-        z-index: 2;
+        z-index: 999;
         cursor: pointer;
     }
 
@@ -556,7 +556,7 @@ nav {
         color: var(--background);
         min-width: 100vw;
         min-height: 100vh;
-
+        z-index: 998;
     }
 
     .hamburger-menu:has(input:checked)+.sidebar {
@@ -620,7 +620,7 @@ nav {
         position: absolute;
         top: var(--hamburger-margin);
         left: var(--hamburger-margin);
-        z-index: 2;
+        z-index: 999;
         cursor: pointer;
     }
 
@@ -685,7 +685,7 @@ nav {
         color: var(--background);
         min-width: 100vw;
         min-height: 100vh;
-
+        z-index: 998;
     }
 
     .hamburger-menu:has(input:checked)+.sidebar {
