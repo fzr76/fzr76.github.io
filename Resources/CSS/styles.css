@@ -154,6 +154,10 @@ nav {
 
 /* Desktop Wide */
 @media only screen and (min-width: 1280px) {
+    body.overlay-gone .diagonal-column1 .diagonal-column2 .diag-content{
+        animation-delay: 0s;
+    }
+
     body {
         flex-direction: column-reverse;
         display: inline-flex;
@@ -254,6 +258,10 @@ nav {
 
 /* Desktop */
 @media only screen and (min-width: 1024px) and (max-width: 1279px) {
+    body.overlay-gone .diagonal-column1 .diagonal-column2 .diag-content{
+        animation-delay: 0s;
+    }
+
     body {
         flex-direction: column-reverse;
         display: inline-flex;
@@ -354,6 +362,10 @@ nav {
 
 /* Tablet Landscape */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    body.overlay-gone .center {
+        animation-delay: 0s;
+    }
+
     body {
         display: grid;
         grid-template-areas: "nav"
@@ -483,6 +495,10 @@ nav {
 
 /* Tablet */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
+    body.overlay-gone .center {
+        animation-delay: 0s;
+    }
+
     body {
         display: grid;
         grid-template-areas: "nav"
@@ -612,6 +628,10 @@ nav {
 
 /* Phone Landscape and Smaller */
 @media only screen and (max-width: 479px) {
+    body.overlay-gone .center {
+        animation-delay: 0s;
+    }
+
     body {
         display: grid;
         grid-template-areas: "nav"
