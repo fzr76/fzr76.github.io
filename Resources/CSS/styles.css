@@ -69,6 +69,7 @@ nav {
     background-color: orange;
     overflow: hidden;
     animation: slideInFromLeft 2s forwards;
+    transform: translateX(-100%);
 }
 
 .logo-container {
@@ -153,17 +154,14 @@ nav {
 /* Desktop Wide */
 @media only screen and (min-width: 1280px) {
     .diagonal-column1.initial-animation {
-        /* animation: slideIn 2s 4s forwards; */
         animation: none;
     }
 
     .diagonal-column2.initial-animation {
-        /* animation: slideIn 2s 4s forwards; */
         animation: none;
     }
 
     .diag-content.initial-animation {
-        /* animation: slideInContent 2s 4s forwards; */
         animation: none;
     }
 
@@ -187,21 +185,19 @@ nav {
     }
 
     .quote {
+        position: absolute;
+        bottom: 2rem;
+        left: 4rem;
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 100%;
-        height: 100%;
-        margin-right: 60vw;
-        margin-bottom: 10vh;
-        transform: skewY(20deg);
-    }
-
-    .quote p {
+        width: 30vw;
+        height: 40vh;
+        z-index: 9;
+        font-family: 'Permanent Marker';
+        font-size: 1.25rem;
         text-align: center;
-        transform: skewY(-20deg);
-        width: 20%;
-        height: 100%;
+        color: white;
     }
 
     .mobileHide {
@@ -264,17 +260,14 @@ nav {
 /* Desktop */
 @media only screen and (min-width: 1024px) and (max-width: 1279px) {
     .diagonal-column1.initial-animation {
-        /* animation: slideIn 2s 4s forwards; */
         animation: none;
     }
 
     .diagonal-column2.initial-animation {
-        /* animation: slideIn 2s 4s forwards; */
         animation: none;
     }
 
     .diag-content.initial-animation {
-        /* animation: slideInContent 2s 4s forwards; */
         animation: none;
     }
 
@@ -298,21 +291,19 @@ nav {
     }
 
     .quote {
+        position: absolute;
+        bottom: 2rem;
+        left: 4rem;
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 100%;
-        height: 100%;
-        margin-right: 60vw;
-        margin-bottom: 5vh;
-        transform: skewY(20deg);
-    }
-
-    .quote p {
+        width: 30vw;
+        height: 40vh;
+        z-index: 9;
+        font-family: 'Permanent Marker';
+        font-size: 1.25rem;
         text-align: center;
-        transform: skewY(-20deg);
-        width: 20%;
-        height: 100%;
+        color: white;
     }
 
     .mobileHide {
@@ -375,7 +366,6 @@ nav {
 /* Tablet Landscape */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
     .center.initial-animation {
-        /* animation: slideInFromLeft 2s 4s forwards; */
         animation: none;
     }
 
@@ -408,6 +398,17 @@ nav {
     .hello {
         font-family: 'fasthand', Arial, sans-serif;
         font-size: 2rem;
+    }
+
+    .quote {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9;
+        font-family: 'Permanent Marker';
+        font-size: 1.25rem;
+        text-align: center;
+        color: white;
     }
 
     /* Hamburger Menu Code for mobile devices */
@@ -509,7 +510,6 @@ nav {
 /* Tablet */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
     .center.initial-animation {
-        /* animation: slideInFromLeft 2s 4s forwards; */
         animation: none;
     }
 
@@ -542,6 +542,17 @@ nav {
     .hello {
         font-family: 'fasthand', Arial, sans-serif;
         font-size: 2rem;
+    }
+
+    .quote {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9;
+        font-family: 'Permanent Marker';
+        font-size: 1.25rem;
+        text-align: center;
+        color: white;
     }
 
     /* Hamburger Menu Code for mobile devices */
@@ -643,7 +654,6 @@ nav {
 /* Phone Landscape and Smaller */
 @media only screen and (max-width: 479px) {
     .center.initial-animation {
-        /* animation: slideInFromLeft 2s 4s forwards; */
         animation: none;
     }
 
@@ -676,6 +686,17 @@ nav {
     .hello {
         font-family: 'fasthand', Arial, sans-serif;
         font-size: 2rem;
+    }
+
+    .quote {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9;
+        font-family: 'Permanent Marker';
+        font-size: 1.25rem;
+        text-align: center;
+        color: white;
     }
 
     /* Hamburger Menu Code for mobile devices */
