@@ -17,7 +17,7 @@ html {
 nav {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     height: 100%;
     color: white;
@@ -176,8 +176,7 @@ nav {
         left: 0;
         height: 100%;
         width: 100%;
-        overflow-x: hidden;
-        overflow-y: hidden;
+        overflow: hidden;
     }
 
     p {
@@ -186,18 +185,19 @@ nav {
 
     .quote {
         position: absolute;
-        bottom: 2rem;
-        left: 4rem;
+        bottom: 0.5rem;
+        left: 0.5rem;
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 30vw;
-        height: 40vh;
+        width: 25vw;
+        height: auto;
         z-index: 9;
         font-family: 'Permanent Marker';
         font-size: 1.25rem;
         text-align: center;
         color: white;
+        border-radius: 40px;
     }
 
     .mobileHide {
@@ -218,7 +218,7 @@ nav {
         height: 100%;
         transform: skewY(20deg) translate3d(-100%, -100%, 0);
         animation: slideIn 2s forwards;
-        background-color: gray;
+        background-color: #333;
         overflow: hidden;
     }
 
@@ -238,6 +238,7 @@ nav {
 
     .diag-content {
         display: flex;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
         height: 100%;
@@ -250,6 +251,17 @@ nav {
         background-position: center;
         background-repeat: repeat-x;
         background-size: contain;
+    }
+
+    .diag-content a {
+        color: white;
+        margin-inline: 2rem;
+        padding-inline: 7px;
+        font-family: 'fasthand';
+        font-size: 2rem;
+        box-shadow: 0 0 5px 5px rgb(255, 165, 0);
+        border-radius: 15px;
+        transform: rotateZ(-20deg);
     }
 
     .hamburger-menu {
@@ -324,7 +336,7 @@ nav {
         height: 100%;
         transform: skewY(20deg) translate3d(-100%, -100%, 0);
         animation: slideIn 2s forwards;
-        background-color: gray;
+        background-color: #333;
         overflow: hidden;
     }
 
@@ -344,6 +356,7 @@ nav {
 
     .diag-content {
         display: flex;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
         height: 100%;
@@ -356,6 +369,17 @@ nav {
         background-position: center;
         background-repeat: repeat-x;
         background-size: contain;
+    }
+
+    .diag-content a {
+        color: white;
+        margin-inline: 2rem;
+        padding-inline: 7px;
+        font-family: 'fasthand';
+        font-size: 2rem;
+        box-shadow: 0 0 5px 5px rgb(255, 165, 0);
+        border-radius: 15px;
+        transform: rotateZ(-20deg);
     }
 
     .hamburger-menu {
@@ -411,6 +435,16 @@ nav {
         color: white;
     }
 
+    .diag-content a {
+        color: white;
+        margin-inline: 2rem;
+        padding-inline: 7px;
+        font-family: 'fasthand';
+        font-size: 2rem;
+        box-shadow: 0 0 5px 5px rgb(255, 165, 0);
+        border-radius: 15px;
+    }
+
     /* Hamburger Menu Code for mobile devices */
 
     :root {
@@ -418,7 +452,7 @@ nav {
         --bar-height: 8px;
         --hamburger-gap: 6px;
         --foreground: #333;
-        --background: white;
+        --background: orange;
         --hamburger-margin: 8px;
         --animation-timing: 400ms ease-in-out;
         --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
@@ -439,7 +473,7 @@ nav {
     }
 
     .hamburger-menu:has(input:checked) {
-        --foreground: white;
+        --foreground: orange;
         --background: #333;
     }
 
@@ -555,6 +589,16 @@ nav {
         color: white;
     }
 
+    .diag-content a {
+        color: white;
+        margin-inline: 2rem;
+        padding-inline: 7px;
+        font-family: 'fasthand';
+        font-size: 2rem;
+        box-shadow: 0 0 5px 5px rgb(255, 165, 0);
+        border-radius: 15px;
+    }
+
     /* Hamburger Menu Code for mobile devices */
 
     :root {
@@ -562,7 +606,7 @@ nav {
         --bar-height: 8px;
         --hamburger-gap: 6px;
         --foreground: #333;
-        --background: white;
+        --background: orange;
         --hamburger-margin: 8px;
         --animation-timing: 400ms ease-in-out;
         --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
@@ -583,7 +627,7 @@ nav {
     }
 
     .hamburger-menu:has(input:checked) {
-        --foreground: white;
+        --foreground: orange;
         --background: #333;
     }
 
@@ -699,6 +743,16 @@ nav {
         color: white;
     }
 
+    .diag-content a {
+        color: white;
+        margin-inline: 2rem;
+        padding-inline: 7px;
+        font-family: 'fasthand';
+        font-size: 2rem;
+        box-shadow: 0 0 5px 5px rgb(255, 165, 0);
+        border-radius: 15px;
+    }
+
     /* Hamburger Menu Code for mobile devices */
 
     :root {
@@ -706,7 +760,7 @@ nav {
         --bar-height: 8px;
         --hamburger-gap: 6px;
         --foreground: #333;
-        --background: white;
+        --background: orange;
         --hamburger-margin: 8px;
         --animation-timing: 400ms ease-in-out;
         --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
@@ -727,7 +781,7 @@ nav {
     }
 
     .hamburger-menu:has(input:checked) {
-        --foreground: white;
+        --foreground: orange;
         --background: #333;
     }
 
