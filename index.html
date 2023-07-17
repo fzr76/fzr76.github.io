@@ -10,43 +10,49 @@
     <script src="Resources/JS/jQuery.js"></script>
   </head>
 
-  <body>
-    <div id="overlay">
-      <h1>Making things look nice<span class="blinking">.</span><span class="blinking" style="animation-delay: 0.2s;">.</span><span class="blinking" style="animation-delay: 0.4s;">.</span></h1>
+  <body class="">
+    <div id="main-section">
+      <div id="overlay">
+        <h1>Making things look nice<span class="blinking">.</span><span class="blinking" style="animation-delay: 0.2s;">.</span><span class="blinking" style="animation-delay: 0.4s;">.</span></h1>
+      </div>
+      <label class="hamburger-menu diag-content initial-animation">
+        <input type="checkbox">
+      </label>
+      <div class="diagonal-column1 center initial-animation">
+        <picture>
+          <source srcset="Resources/Images/memojiWithMac.webp" type="image/webp">
+          <source srcset="Resources/Images/memojiWithMac.png" type="image/png">
+          <img src="Resources/Images/memojiWithMac.PNG" class="mobile-logo mobileHide">
+        </picture>
+        <h1 class="diag-content hello initial-animation">Hi, I'm Joshua Gaither</h1>
+      </div>
+      <aside class="sidebar diagonal-column2 nav initial-animation">
+        <nav class="diag-content initial-animation">
+          <a href="Resources/HTML/projects.html">Projects</a>
+          <a href="Resources/HTML/skills.html">Skills</a>
+          <a href="Resources/HTML/tools.html">Tools I Use</a>
+          <a href="Resources/HTML/about.html">About Me</a>
+        </nav>
+      </aside>
+      <div class="logo-container">
+        <picture>
+          <source srcset="Resources/Images/memojiWithMac.webp" type="image/webp">
+          <source srcset="Resources/Images/memojiWithMac.png" type="image/png">
+          <img src="Resources/Images/memojiWithMac.PNG" alt="Logo" class="logo desktopHide">
+        </picture>
+      </div>
+      <div class="quote initial-animation">
+        <p>
+          My fascination with technology is about more than fixing 
+          issues; it's understanding systems in their entirety.
+        </p>
+      </div>
     </div>
-    <label class="hamburger-menu diag-content initial-animation">
-      <input type="checkbox">
-    </label>
-    <aside class="sidebar diagonal-column1 nav initial-animation">
-      <nav class="diag-content initial-animation">
-        <a href="Resources/HTML/projects.html">Projects</a>
-        <a href="Resources/HTML/skills.html">Skills</a>
-        <a href="Resources/HTML/tools.html">Tools I Use</a>
-        <a href="Resources/HTML/about.html">About Me</a>
-      </nav>
-    </aside>
-    <div class="diagonal-column2 center initial-animation">
-      <picture>
-        <source srcset="Resources/Images/memojiWithMac.webp" type="image/webp">
-        <source srcset="Resources/Images/memojiWithMac.png" type="image/png">
-        <img src="Resources/Images/memojiWithMac.PNG" class="mobile-logo mobileHide">
-      </picture>
-      <h1 class="diag-content hello initial-animation">Hi, I'm Joshua Gaither</h1>
-    </div>
-    <div class="logo-container">
-      <picture>
-        <source srcset="Resources/Images/memojiWithMac.webp" type="image/webp">
-        <source srcset="Resources/Images/memojiWithMac.png" type="image/png">
-        <img src="Resources/Images/memojiWithMac.PNG" alt="Logo" class="logo desktopHide">
-      </picture>
-    </div>
-    <div class="quote initial-animation">
-      <p>
-        My fascination with technology is about more than fixing 
-        issues; it's understanding systems in their entirety.
-      </p>
+    <div class="lorem">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ullamcorper porttitor finibus. Maecenas maximus massa semper risus tincidunt elementum. Proin ullamcorper, lacus pharetra viverra egestas, velit arcu viverra quam, ac dapibus nibh tortor vel sem. Nullam a lectus tortor. Nam nec dignissim urna, sed vulputate erat. Quisque condimentum dapibus convallis. Etiam mollis augue vel erat accumsan, at semper arcu elementum.</p>
     </div>
     <script src="Resources/JS/loadScreen.js"></script>
+    <script src="Resources/JS/scrollTransform.js"></script>
   </body>
 
 </html>

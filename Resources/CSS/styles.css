@@ -14,6 +14,15 @@ html {
     background-color: black;
 }
 
+#main-section {
+    width: 100%;
+    height: 50%;
+}
+
+p {
+    color: white;
+}
+
 nav {
     display: flex;
     flex-direction: column;
@@ -103,7 +112,7 @@ nav a:active {
 }
 
 .logo-container {
-    position: absolute;
+    position: fixed;
     display: flex;
     justify-content: start;
     align-items: center;
@@ -130,6 +139,13 @@ nav a:active {
     height: auto;
     width: 15%;
     margin-top: 2rem;
+}
+
+.lorem {
+    margin-top: 35rem;
+    font-size: 50px;
+    width: 40vw;
+    height: auto;
 }
 
 /* This section is for the loading overlay screen */
@@ -200,7 +216,7 @@ nav a:active {
     }
 
     body {
-        flex-direction: column-reverse;
+        flex-direction: column;
         display: inline-flex;
         justify-content: left;
         align-items: center;
@@ -210,15 +226,28 @@ nav a:active {
         left: 0;
         height: 100%;
         width: 100%;
-        overflow: hidden;
+        overflow-x: hidden;
     }
 
-    p {
-        color: white;
+    /* New styles for when scrolling down */
+    .scroll .diagonal-column1, 
+    .scroll .diagonal-column2 {
+        transform: skewY(0deg) translate3d(0, 0, 0);
+        margin-top: 0;
+    }
+
+    .scroll .quote {
+        position: static;
+        width: 100%;
+        bottom: unset;
+        left: unset;
+        transform: translateX(0);
+        animation: none;
+        margin-top: 2rem;
     }
 
     .quote {
-        position: absolute;
+        position: fixed;
         bottom: 0.5rem;
         left: 0.5rem;
         display: flex;
@@ -251,10 +280,11 @@ nav a:active {
         align-items: center;
         text-align: center;
         width: 100%;
-        height: 100%;
+        height: 50%;
+        margin-top: 15rem;
         transform: skewY(20deg) translate3d(-100%, -100%, 0);
         animation: slideIn 2s forwards;
-        background-color: #333;
+        background-color: orange;
         overflow: hidden;
     }
 
@@ -264,11 +294,10 @@ nav a:active {
         align-items: center;
         text-align: center;
         width: 100%;
-        height: 100%;
-        margin-top: 15rem;
+        height: 50%;
         transform: skewY(20deg) translate3d(-100%, -100%, 0);
         animation: slideIn 2s forwards;
-        background-color: orange;
+        background-color: #333;
         overflow: hidden;
     }
 
@@ -337,7 +366,8 @@ nav a:active {
     }
 
     body {
-        flex-direction: column-reverse;
+        /* flex-direction: column-reverse; */
+        flex-direction: column;
         display: inline-flex;
         justify-content: left;
         align-items: center;
@@ -348,15 +378,11 @@ nav a:active {
         height: 100%;
         width: 100%;
         overflow-x: hidden;
-        overflow-y: hidden;
-    }
-
-    p {
-        color: white;
+        overflow-y: auto;
     }
 
     .quote {
-        position: absolute;
+        position: fixed;
         bottom: 0.5rem;
         left: 0.5rem;
         display: flex;
@@ -389,10 +415,11 @@ nav a:active {
         align-items: center;
         text-align: center;
         width: 100%;
-        height: 100%;
+        height: 50%;
+        margin-top: 15rem;
         transform: skewY(20deg) translate3d(-100%, -100%, 0);
         animation: slideIn 2s forwards;
-        background-color: #333;
+        background-color: orange;
         overflow: hidden;
     }
 
@@ -402,11 +429,10 @@ nav a:active {
         align-items: center;
         text-align: center;
         width: 100%;
-        height: 100%;
+        height: 50%;
         transform: skewY(20deg) translate3d(-100%, -100%, 0);
         animation: slideIn 2s forwards;
-        margin-top: 15rem;
-        background-color: orange;
+        background-color: #333;
         overflow: hidden;
     }
 
