@@ -17,11 +17,29 @@ html {
 nav {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     height: 100%;
     color: white;
     word-wrap: break-word;
+}
+
+nav a {
+    margin: 2rem;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: black;
+    background-color: orange;
+    box-shadow: 0 0 20px 20px rgb(255, 165, 0);
+    transition: background-color 0.5s ease;
+}
+
+nav a:active {
+    color: black;
+    background-color: orange;
+    box-shadow: 0 0 40px 40px rgb(255, 165, 0);
 }
 
 @font-face {
@@ -49,6 +67,18 @@ nav {
 @keyframes slideInFromLeft {
     0% {
         transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
         opacity: 0;
     }
 
@@ -165,6 +195,10 @@ nav {
         animation: none;
     }
 
+    .quote.initial-animation {
+        animation: none;
+    }
+
     body {
         flex-direction: column-reverse;
         display: inline-flex;
@@ -198,6 +232,8 @@ nav {
         text-align: center;
         color: white;
         border-radius: 40px;
+        transform: translateX(-100%);
+        animation: slideInFromLeft 2s forwards;
     }
 
     .mobileHide {
@@ -264,6 +300,19 @@ nav {
         transform: rotateZ(-20deg);
     }
 
+    .diag-content a:hover {
+        color: black;
+        background-color: orange;
+        box-shadow: 0 0 20px 20px rgb(255, 165, 0);
+        transition: background-color 0.5s ease;
+    }
+    
+    .diag-content a:active {
+        color: black;
+        background-color: orange;
+        box-shadow: 0 0 40px 40px rgb(255, 165, 0);
+    }
+
     .hamburger-menu {
         display: none;
     }
@@ -280,6 +329,10 @@ nav {
     }
 
     .diag-content.initial-animation {
+        animation: none;
+    }
+
+    .quote.initial-animation {
         animation: none;
     }
 
@@ -304,18 +357,21 @@ nav {
 
     .quote {
         position: absolute;
-        bottom: 2rem;
-        left: 4rem;
+        bottom: 0.5rem;
+        left: 0.5rem;
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 30vw;
-        height: 40vh;
+        width: 25vw;
+        height: auto;
         z-index: 9;
         font-family: 'Permanent Marker';
         font-size: 1.25rem;
         text-align: center;
         color: white;
+        border-radius: 40px;
+        transform: translateX(-100%);
+        animation: slideInFromLeft 2s forwards;
     }
 
     .mobileHide {
@@ -324,7 +380,7 @@ nav {
 
     .hello {
         font-family: 'Permanent Marker', Arial, sans-serif;
-        font-size: 4rem;
+        font-size: 5rem;
     }
 
     .diagonal-column1 {
@@ -349,7 +405,7 @@ nav {
         height: 100%;
         transform: skewY(20deg) translate3d(-100%, -100%, 0);
         animation: slideIn 2s forwards;
-        margin-top: 10rem;
+        margin-top: 15rem;
         background-color: orange;
         overflow: hidden;
     }
@@ -382,6 +438,19 @@ nav {
         transform: rotateZ(-20deg);
     }
 
+    .diag-content a:hover {
+        color: black;
+        background-color: orange;
+        box-shadow: 0 0 20px 20px rgb(255, 165, 0);
+        transition: background-color 0.5s ease;
+    }
+    
+    .diag-content a:active {
+        color: black;
+        background-color: orange;
+        box-shadow: 0 0 40px 40px rgb(255, 165, 0);
+    }
+
     .hamburger-menu {
         display: none;
     }
@@ -390,6 +459,10 @@ nav {
 /* Tablet Landscape */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
     .center.initial-animation {
+        animation: none;
+    }
+
+    .quote.initial-animation {
         animation: none;
     }
 
@@ -429,10 +502,18 @@ nav {
         justify-content: center;
         align-items: center;
         z-index: 9;
+        background-color: #333;
         font-family: 'Permanent Marker';
         font-size: 1.25rem;
         text-align: center;
         color: white;
+        transform: translateX(-100%);
+        animation: slideInFromRight 2s forwards;
+    }
+
+    .quote p {
+        margin: 4rem;
+        padding: 0;
     }
 
     .diag-content a {
@@ -460,7 +541,6 @@ nav {
 
     .hamburger-menu {
         --x-width: calc(var(--hamburger-height) * 1.41421356237);
-
         display: flex;
         flex-direction: column;
         gap: var(--hamburger-gap);
@@ -547,6 +627,10 @@ nav {
         animation: none;
     }
 
+    .quote.initial-animation {
+        animation: none;
+    }
+
     body {
         display: grid;
         grid-template-areas: "nav"
@@ -583,10 +667,18 @@ nav {
         justify-content: center;
         align-items: center;
         z-index: 9;
+        background-color: #333;
         font-family: 'Permanent Marker';
         font-size: 1.25rem;
         text-align: center;
         color: white;
+        transform: translateX(-100%);
+        animation: slideInFromRight 2s forwards;
+    }
+
+    .quote p {
+        margin: 4rem;
+        padding: 0;
     }
 
     .diag-content a {
@@ -701,6 +793,10 @@ nav {
         animation: none;
     }
 
+    .quote.initial-animation {
+        animation: none;
+    }
+
     body {
         display: grid;
         grid-template-areas: "nav"
@@ -737,10 +833,18 @@ nav {
         justify-content: center;
         align-items: center;
         z-index: 9;
+        background-color: #333;
         font-family: 'Permanent Marker';
         font-size: 1.25rem;
         text-align: center;
         color: white;
+        transform: translateX(-100%);
+        animation: slideInFromRight 2s forwards;
+    }
+
+    .quote p {
+        margin: 4rem;
+        padding: 0;
     }
 
     .diag-content a {
