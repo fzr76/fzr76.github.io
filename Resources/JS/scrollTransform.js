@@ -4,4 +4,8 @@ window.addEventListener('scroll', function() {
         } else {
             document.body.classList.remove('scroll');
         }
-    });
+});
+
+window.addEventListener('scroll', function() {
+    console.log(window.scrollY);
+});
