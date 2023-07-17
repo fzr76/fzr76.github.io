@@ -142,13 +142,6 @@ nav a:active {
     margin-top: 2rem;
 }
 
-.lorem {
-    margin-top: 35rem;
-    font-size: 50px;
-    width: 40vw;
-    height: auto;
-}
-
 /* This section is for the loading overlay screen */
 
 #overlay {
