@@ -351,6 +351,25 @@ nav a:active {
     .hamburger-menu {
         display: none;
     }
+
+    /* New styles for when scrolling down */
+    .unskew {
+        transform: none !important;
+        animation: none !important;
+        transition: transform 2s ease;
+        margin-top: 0;
+    }
+
+    .diag-content.unskew {
+        transform: none !important;
+    }
+
+    .diag-content a.unskew {
+        transform: none;
+        animation: none !important;
+    }
+
+
 }
 
 /* Desktop */
