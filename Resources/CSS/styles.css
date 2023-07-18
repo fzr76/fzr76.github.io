@@ -19,14 +19,45 @@ html {
     height: 50%;
 }
 
-p {
+#Projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    font-family: 'Permanent Marker';
+    color: white;
+}
+
+.project-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Courier New', monospace;
+    min-width: 300px;
+    width: 40vw;
+    height: 40vh;
+    margin: 4rem;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: orange;
+    color: black;
+}
+
+.project-box:nth-of-type(odd) {
+    background-color: #333;
     color: white;
 }
 
 nav {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     height: 100%;
     width: 100%;
@@ -113,10 +144,9 @@ nav a:active {
 }
 
 .logo-container {
-    position: fixed;
-    display: flex;
-    justify-content: start;
-    align-items: center;
+    position: absolute;
+    padding-top: 2rem;
+    padding-right: 2rem;
     width: 25%;
     top: 0;
     right: 0;
@@ -126,9 +156,10 @@ nav a:active {
 }
 
 .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 0;
-    padding-top: 2rem;
-    padding-right: 2rem;
     top: 0;
     right: 0;
     max-width: 60%;
@@ -211,7 +242,6 @@ nav a:active {
 
     body {
         flex-direction: column;
-        display: inline-flex;
         justify-content: left;
         align-items: center;
         margin: 0;
@@ -220,28 +250,14 @@ nav a:active {
         left: 0;
         height: 100%;
         width: 100%;
-        overflow-x: hidden;
     }
 
-    /* New styles for when scrolling down */
-    .scroll .diagonal-column1, 
-    .scroll .diagonal-column2 {
-        transform: skewY(0deg) translate3d(0, 0, 0);
-        margin-top: 0;
-    }
-
-    .scroll .quote {
-        position: static;
-        width: 100%;
-        bottom: unset;
-        left: unset;
-        transform: translateX(0);
-        animation: none;
-        margin-top: 2rem;
+    #Projects {
+        margin-top: 20rem;
     }
 
     .quote {
-        position: fixed;
+        position: absolute;
         bottom: 0.5rem;
         left: 0.5rem;
         display: flex;
@@ -306,10 +322,6 @@ nav a:active {
         padding: 0;
         transform: skewY(-20deg) rotateZ(20deg) translate3d(100%, 100%, 0);
         animation: slideInContent 2s forwards;
-        /* background-image: url("Resources/Images/honeycomb.png");
-        background-position: center;
-        background-repeat: repeat-x;
-        background-size: contain; */
     }
 
     .diag-content a {
@@ -360,9 +372,7 @@ nav a:active {
     }
 
     body {
-        /* flex-direction: column-reverse; */
         flex-direction: column;
-        display: inline-flex;
         justify-content: left;
         align-items: center;
         margin: 0;
@@ -371,12 +381,14 @@ nav a:active {
         left: 0;
         height: 100%;
         width: 100%;
-        overflow-x: hidden;
-        overflow-y: auto;
+    }
+
+    #Projects {
+        margin-top: 20rem;
     }
 
     .quote {
-        position: fixed;
+        position: absolute;
         bottom: 0.5rem;
         left: 0.5rem;
         display: flex;
@@ -441,10 +453,6 @@ nav a:active {
         padding: 0;
         transform: skewY(-20deg) rotateZ(20deg) translate3d(100%, 100%, 0);
         animation: slideInContent 2s forwards;
-        /* background-image: url("Resources/Images/honeycomb.png");
-        background-position: center;
-        background-repeat: repeat-x;
-        background-size: contain; */
     }
 
     .diag-content a {
@@ -487,21 +495,10 @@ nav a:active {
     }
 
     body {
-        display: grid;
-        grid-template-areas: "nav"
-            "center"
-            "footer";
-        grid-template: 3 / 1;
         margin: 0;
         padding: 0;
         width: 100%;
         overflow-x: hidden;
-        overflow-y: hidden;
-    }
-
-    p {
-        margin-bottom: 4rem;
-        margin-inline: 5rem;
     }
 
     aside {
@@ -513,7 +510,7 @@ nav a:active {
     }
 
     .hello {
-        font-family: 'fasthand', Arial, sans-serif;
+        font-family: 'Permanent Marker', Arial, sans-serif;
         font-size: 2rem;
     }
 
@@ -654,21 +651,10 @@ nav a:active {
     }
 
     body {
-        display: grid;
-        grid-template-areas: "nav"
-            "center"
-            "footer";
-        grid-template: 3 / 1;
         margin: 0;
         padding: 0;
         width: 100%;
         overflow-x: hidden;
-        overflow-y: hidden;
-    }
-
-    p {
-        margin-bottom: 4rem;
-        margin-inline: 5rem;
     }
 
     aside {
@@ -680,7 +666,7 @@ nav a:active {
     }
 
     .hello {
-        font-family: 'fasthand', Arial, sans-serif;
+        font-family: 'Permanent Marker', Arial, sans-serif;
         font-size: 2rem;
     }
 
@@ -821,21 +807,10 @@ nav a:active {
     }
 
     body {
-        display: grid;
-        grid-template-areas: "nav"
-            "center"
-            "footer";
-        grid-template: 3 / 1;
         margin: 0;
         padding: 0;
         width: 100%;
         overflow-x: hidden;
-        overflow-y: hidden;
-    }
-
-    p {
-        margin-bottom: 4rem;
-        margin-inline: 5rem;
     }
 
     aside {
@@ -847,7 +822,7 @@ nav a:active {
     }
 
     .hello {
-        font-family: 'fasthand', Arial, sans-serif;
+        font-family: 'Permanent Marker', Arial, sans-serif;
         font-size: 2rem;
     }
 
