@@ -1,21 +1,20 @@
 window.addEventListener('scroll', function() {
-    var diagContentLinks = document.querySelectorAll(".diag-content a");
-
+    const navbar = document.getElementById('myNavbar');
+    const diagonalColumn = document.getElementById('diagonal-column2');
+    const topButton = document.getElementById('top');
+    
     if (window.scrollY > 0) {
         document.body.classList.add('scroll');
-        document.querySelector(".diagonal-column1").classList.add("unskew");
-        document.querySelector(".diagonal-column2").classList.add("unskew");
-        document.querySelector(".sidebar .diag-content").classList.add("unskew");
-        for (var i = 0; i < diagContentLinks.length; i++) {
-            diagContentLinks[i].classList.add("unskew");
-        }
+        navbar.classList.add('show');
+        diagonalColumn.style.display = "none";
+        topButton.style.display = "flex"
+        diagonalColumn.classList.remove('slide-in');  // remove the animation class
     } else {
         document.body.classList.remove('scroll');
-        document.querySelector(".diagonal-column1").classList.remove("unskew");
-        document.querySelector(".diagonal-column2").classList.remove("unskew");
-        document.querySelector(".sidebar .diag-content").classList.remove("unskew");
-        for (var i = 0; i < diagContentLinks.length; i++) {
-            diagContentLinks[i].classList.remove("unskew");
-        }
+        navbar.classList.remove('show');
+        diagonalColumn.style.display = "block";
+        topButton.style.display = "none";
+        void diagonalColumn.offsetWidth;  // trigger a reflow (flush of the CSS cache)
+        diagonalColumn.classList.add('slide-in');  // re-add the animation class
     }
 });
