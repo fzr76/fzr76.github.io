@@ -15,10 +15,10 @@
       <a href="#Tools">Tools I Use</a>
       <a href="#About">About Me</a>
     </div>
-    <div class="top-anchor" id="top">
-      <a href="#top">Top</a>
-    </div>
-    <div class="logo-container">
+    <button class="top-anchor" id="top">
+      <a href="#logo">Top</a>
+    </button>
+    <div class="logo-container" id="logo">
       <picture>
         <source srcset="Resources/Images/memojiWithMac.webp" type="image/webp">
         <source srcset="Resources/Images/memojiWithMac.png" type="image/png">
@@ -38,7 +38,7 @@
         <h1 class="diag-content hello initial-animation">Hi, I'm Joshua Gaither</h1>
       </div>
       <label class="hamburger-menu diag-content initial-animation">
-        <input type="checkbox">
+        <input type="checkbox" id="hamburger-checkbox">
       </label>
       <aside class="sidebar" id="sidebar">
         <nav class="diag-content initial-animation">
@@ -91,6 +91,7 @@
     </div>
     <script src="Resources/JS/loadScreen.js"></script>
     <script src="Resources/JS/scrollTransform.js"></script>
+    <script src="Resources/JS/hamburgerMenu.js"></script>
   </body>
 
 </html>

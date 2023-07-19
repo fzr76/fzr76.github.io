@@ -3,11 +3,11 @@ window.addEventListener('scroll', function() {
     const diagonalColumn = document.getElementById('diagonal-column2');
     const topButton = document.getElementById('top');
     
-    if (window.scrollY > 0) {
+    if (window.scrollY > 500) {
         document.body.classList.add('scroll');
         navbar.classList.add('show');
         diagonalColumn.style.display = "none";
-        topButton.style.display = "flex"
+        topButton.style.display = "flex";
         diagonalColumn.classList.remove('slide-in');  // remove the animation class
     } else {
         document.body.classList.remove('scroll');
