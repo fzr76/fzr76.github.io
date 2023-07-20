@@ -10,3 +10,9 @@ links.forEach(link => {
         checkbox.checked = false;
     });
 });
+
+$(document).ready(function() {
+  $('#hamburger-checkbox').change(function() {
+      $('.hamburger-menu, .sidebar').toggleClass('active', this.checked);
+  });
+});

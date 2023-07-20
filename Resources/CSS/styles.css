@@ -357,7 +357,7 @@ nav a:active {
         box-shadow: 0 0 20px 20px rgb(255, 165, 0);
         transition: background-color 0.5s ease;
     }
-    
+
     .diag-content a:active {
         color: black;
         background-color: orange;
@@ -400,7 +400,7 @@ nav a:active {
         border-radius: 15px;
         text-decoration: none;
     }
-    
+
     .navbar.show {
         left: 0;
     }
@@ -535,7 +535,7 @@ nav a:active {
         box-shadow: 0 0 20px 20px rgb(255, 165, 0);
         transition: background-color 0.5s ease;
     }
-    
+
     .diag-content a:active {
         color: black;
         background-color: orange;
@@ -578,7 +578,7 @@ nav a:active {
         border-radius: 15px;
         text-decoration: none;
     }
-    
+
     .navbar.show {
         left: 0;
     }
@@ -689,16 +689,9 @@ nav a:active {
         cursor: pointer;
     }
 
-    .hamburger-menu:has(input:checked) {
+    .hamburger-menu.active {
         --foreground: orange;
         --background: #333;
-    }
-
-    .hamburger-menu:has(input:focus-visible)::before,
-    .hamburger-menu:has(input:focus-visible)::after,
-    .hamburger-menu input:focus-visible {
-        border: 1px solid var(--background);
-        box-shadow: 0 0 0 1px var(--foreground);
     }
 
     .hamburger-menu::before,
@@ -723,13 +716,13 @@ nav a:active {
         pointer-events: none;
     }
 
-    .hamburger-menu:has(input:checked)::before {
+    .hamburger-menu.active::before {
         rotate: 45deg;
         width: var(--x-width);
         translate: 0 calc(var(--bar-height) / -2);
     }
 
-    .hamburger-menu:has(input:checked)::after {
+    .hamburger-menu.active::after {
         rotate: -45deg;
         width: var(--x-width);
         translate: 0 calc(var(--bar-height) / 2);
@@ -754,7 +747,7 @@ nav a:active {
         z-index: 998;
     }
 
-    .hamburger-menu:has(input:checked)+.sidebar {
+    .sidebar.active {
         top: 0;
         transform: translateX(0);
     }
@@ -855,16 +848,9 @@ nav a:active {
         cursor: pointer;
     }
 
-    .hamburger-menu:has(input:checked) {
+    .hamburger-menu.active {
         --foreground: orange;
         --background: #333;
-    }
-
-    .hamburger-menu:has(input:focus-visible)::before,
-    .hamburger-menu:has(input:focus-visible)::after,
-    .hamburger-menu input:focus-visible {
-        border: 1px solid var(--background);
-        box-shadow: 0 0 0 1px var(--foreground);
     }
 
     .hamburger-menu::before,
@@ -889,13 +875,13 @@ nav a:active {
         pointer-events: none;
     }
 
-    .hamburger-menu:has(input:checked)::before {
+    .hamburger-menu.active::before {
         rotate: 45deg;
         width: var(--x-width);
         translate: 0 calc(var(--bar-height) / -2);
     }
 
-    .hamburger-menu:has(input:checked)::after {
+    .hamburger-menu.active::after {
         rotate: -45deg;
         width: var(--x-width);
         translate: 0 calc(var(--bar-height) / 2);
@@ -920,7 +906,7 @@ nav a:active {
         z-index: 998;
     }
 
-    .hamburger-menu:has(input:checked)+.sidebar {
+    .sidebar.active {
         top: 0;
         transform: translateX(0);
     }
@@ -1021,16 +1007,9 @@ nav a:active {
         cursor: pointer;
     }
 
-    .hamburger-menu:has(input:checked) {
+    .hamburger-menu.active {
         --foreground: orange;
         --background: #333;
-    }
-
-    .hamburger-menu:has(input:focus-visible)::before,
-    .hamburger-menu:has(input:focus-visible)::after,
-    .hamburger-menu input:focus-visible {
-        border: 1px solid var(--background);
-        box-shadow: 0 0 0 1px var(--foreground);
     }
 
     .hamburger-menu::before,
@@ -1055,13 +1034,13 @@ nav a:active {
         pointer-events: none;
     }
 
-    .hamburger-menu:has(input:checked)::before {
+    .hamburger-menu.active::before {
         rotate: 45deg;
         width: var(--x-width);
         translate: 0 calc(var(--bar-height) / -2);
     }
 
-    .hamburger-menu:has(input:checked)::after {
+    .hamburger-menu.active::after {
         rotate: -45deg;
         width: var(--x-width);
         translate: 0 calc(var(--bar-height) / 2);
@@ -1086,7 +1065,7 @@ nav a:active {
         z-index: 998;
     }
 
-    .hamburger-menu:has(input:checked)+.sidebar {
+    .sidebar.active {
         top: 0;
         transform: translateX(0);
     }
