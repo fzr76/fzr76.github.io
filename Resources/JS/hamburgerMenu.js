@@ -1,16 +1,16 @@
 $(document).ready(function() {
-  $('#hamburger-checkbox').change(function() {
-      $('.hamburger-menu, .sidebar').toggleClass('active', this.checked);
-      if (!this.checked) {
-          // If the checkbox is not checked (menu is closed), uncheck all checkboxes
-          const sidebar = document.querySelector('.sidebar');
-          const links = sidebar.querySelectorAll('a');
-          links.forEach(link => {
-              link.click();
-          });
-      }
-  });
+    $('#hamburger-checkbox').change(function() {
+        $('.hamburger-menu, .sidebar').toggleClass('active', this.checked);
+    });
+
+    // Add a click event listener to each link in the sidebar
+    $('.sidebar a').click(function() {
+        // Uncheck the hamburger checkbox to close the sidebar
+        $('#hamburger-checkbox').prop('checked', false);
+        $('.hamburger-menu, .sidebar').removeClass('active');
+    });
 });
+
 
 // Get the sidebar and hamburger checkbox elements
 // const sidebar = document.querySelector('.sidebar');
