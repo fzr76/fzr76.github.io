@@ -1,0 +1,193 @@
+My HTML:
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="Resources/Images/tabLogoMemoji.PNG">
+    <title>FZR76 Portfolio</title>
+    <link rel="stylesheet" href="Resources/CSS/styles.css">
+    <script src="Resources/JS/code.jquery.com_jquery-3.7.0.min.js"></script>
+  </head>
+
+  <body class="">
+    <div class="navbar" id="myNavbar">
+      <a href="#Projects">Projects</a>
+      <a href="#Tools">Tools I Use</a>
+      <a href="#About">About Me</a>
+    </div>
+    <button class="top-anchor" id="top">
+      <a href="#logo">Top</a>
+    </button>
+    <div class="logo-container" id="logo">
+      <picture>
+        <source srcset="Resources/Images/memojiWithMac.webp" type="image/webp">
+        <source srcset="Resources/Images/memojiWithMac.png" type="image/png">
+        <img src="Resources/Images/memojiWithMac.PNG" alt="Logo" class="logo desktopHide">
+      </picture>
+    </div>
+    <div id="main-section">
+      <div id="overlay">
+        <h1>Making things look nice<span class="blinking">.</span><span class="blinking" style="animation-delay: 0.2s;">.</span><span class="blinking" style="animation-delay: 0.4s;">.</span></h1>
+      </div>
+      <div class="diagonal-column1 center initial-animation">
+        <picture>
+          <source srcset="Resources/Images/memojiWithMac.webp" type="image/webp">
+          <source srcset="Resources/Images/memojiWithMac.png" type="image/png">
+          <img src="Resources/Images/memojiWithMac.PNG" class="mobile-logo mobileHide">
+        </picture>
+        <h1 class="diag-content hello initial-animation">Hi, I'm Joshua Gaither</h1>
+      </div>
+      <label class="hamburger-menu diag-content initial-animation">
+        <input type="checkbox" id="hamburger-checkbox">
+      </label>
+      <aside class="sidebar" id="sidebar">
+        <nav class="diag-content initial-animation">
+          <a href="#Projects">Projects</a>
+          <a href="#Tools">Tools I Use</a>
+          <a href="#About">About Me</a>
+        </nav>
+      </aside>
+      <div class="diagonal-column2 nav initial-animation" id="diagonal-column2">
+        <nav class="diag-content initial-animation">
+          <a href="#Projects">Projects</a>
+          <a href="#Tools">Tools I Use</a>
+          <a href="#About">About Me</a>
+        </nav>
+      </div>
+      <div class="quote initial-animation">
+        <p>
+          My fascination with technology is about more than fixing 
+          issues; it's understanding systems in their entirety.
+        </p>
+      </div>
+    </div>
+    <div id="Content">
+      <div id="Projects">
+        <h1>My Projects</h1>
+      </div>
+      <div class="project-box">
+        <h1>VHS BlueCut</h1>
+        <p>Enjoy your cherished memories without the hassle of blue 
+          screens with BlueCut</p>
+      </div>
+      <div class="project-box">
+        <h1>VCF Merger</h1>
+      </div>
+      <div>
+        <h1>What I'm working on currently</h1>
+      </div>
+      <div class="project-box">
+        <h1>This Website!</h1>
+      </div>
+      <div class="project-box">
+        <h1>RepairBook</h1>
+      </div>
+      <div id="Tools">
+        <h1>Tools and Skills</h1>
+      </div>
+      <div id="About">
+        <h1>About Me</h1>
+      </div>
+    </div>
+    <script src="Resources/JS/loadScreen.js"></script>
+    <script src="Resources/JS/scrollTransform.js"></script>
+    <script src="Resources/JS/hamburgerMenu.js"></script>
+  </body>
+
+</html>
+
+My CSS:
+
+/* Hamburger Menu Code for mobile devices */
+
+    :root {
+        --bar-width: 60px;
+        --bar-height: 8px;
+        --hamburger-gap: 6px;
+        --foreground: #333;
+        --background: orange;
+        --hamburger-margin: 8px;
+        --animation-timing: 400ms ease-in-out;
+        --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+    }
+
+    .hamburger-menu {
+        --x-width: calc(var(--hamburger-height) * 1.41421356237);
+        display: flex;
+        flex-direction: column;
+        gap: var(--hamburger-gap);
+        width: max-content;
+        position: fixed;
+        top: var(--hamburger-margin);
+        left: var(--hamburger-margin);
+        z-index: 999;
+        cursor: pointer;
+    }
+
+    .hamburger-menu.active {
+        --foreground: orange;
+        --background: #333;
+    }
+
+    .hamburger-menu::before,
+    .hamburger-menu::after,
+    .hamburger-menu input {
+        content: "";
+        width: var(--bar-width);
+        height: var(--bar-height);
+        background-color: var(--foreground);
+        border-radius: 9999px;
+        transform-origin: left center;
+        transition: opacity var(--animation-timing), width var(--animation-timing),
+            rotate var(--animation-timing), translate var(--animation-timing),
+            background-color var(--animation-timing);
+    }
+
+    .hamburger-menu input {
+        appearance: none;
+        padding: 0;
+        margin: 0;
+        outline: none;
+        pointer-events: none;
+    }
+
+    .hamburger-menu.active::before {
+        rotate: 45deg;
+        width: var(--x-width);
+        translate: 0 calc(var(--bar-height) / -2);
+    }
+
+    .hamburger-menu.active::after {
+        rotate: -45deg;
+        width: var(--x-width);
+        translate: 0 calc(var(--bar-height) / 2);
+    }
+
+    .hamburger-menu input:checked {
+        opacity: 0;
+        width: 0;
+    }
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        transform: translateX(-100%);
+        transition: transform var(--animation-timing);
+        padding: 0.5rem 1rem;
+        padding-top: calc(var(--hamburger-height) + var(--hamburger-margin) + 1rem);
+        background-color: var(--foreground);
+        color: var(--background);
+        min-width: 100vw;
+        min-height: 100vh;
+        z-index: 998;
+    }
+
+    .sidebar.active {
+        top: 0;
+        transform: translateX(0);
+    }
+
+For some reason on my iPad running iOS 14.1 using safari, the middle bar in the hamburger menu shows a checkbox instead. But works on all my other devices

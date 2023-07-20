@@ -709,6 +709,8 @@ nav a:active {
     }
 
     .hamburger-menu input {
+        -webkit-appearance: none;
+        -moz-appearance: none;
         appearance: none;
         padding: 0;
         margin: 0;
@@ -868,6 +870,8 @@ nav a:active {
     }
 
     .hamburger-menu input {
+        -webkit-appearance: none;
+        -moz-appearance: none;
         appearance: none;
         padding: 0;
         margin: 0;
@@ -1027,6 +1031,8 @@ nav a:active {
     }
 
     .hamburger-menu input {
+        -webkit-appearance: none;
+        -moz-appearance: none;
         appearance: none;
         padding: 0;
         margin: 0;
