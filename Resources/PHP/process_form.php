@@ -1,4 +1,3 @@
-<?php
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Fetch form data
     $name = $_POST["name"];
@@ -6,7 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $message = $_POST["message"];
     
     // Set your email address where you want to receive inquiries
-    $to = "fzr76@protonmail.com";
+    $to = "gaitheraaronjosh@protonmail.com";
     
     // Email subject and content
     $subject = "Someone Reached Out From Your Website!";
@@ -19,4 +18,3 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         echo "Oops! Something went wrong. Please try again later.";
     }
 }
-?>
