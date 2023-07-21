@@ -34,16 +34,44 @@ html {
 
 .top-anchor {
     position: fixed;
-    display: none;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
     bottom: 0;
     right: 0;
-    width: 5vw;
-    height: 5vh;
+    margin: 1rem;
+    width: 60px;
+    height: 60px;
+    background-color: #555;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.arrowbar1 {
+    width: 30px;
+    height: 5px;
     background-color: orange;
-    color: white;
+    transform: translate(9px, 6px) rotate(45deg);
+    border-radius: 15px;
+}
+
+.arrowbar2 {
+    width: 40px;
+    height: 5px;
+    background-color: orange;
+    transform: translate(0, 13px) rotate(90deg);
+    border-radius: 15px;
+    
+}
+
+.arrowbar3 {
+    width: 5px;
+    height: 30px;
+    background-color: orange;
+    transform: translate(-10px, -16px) rotate(45deg);
+    border-radius: 15px;
 }
 
 .project-box {
