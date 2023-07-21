@@ -7,7 +7,7 @@ window.addEventListener('scroll', function() {
         const rect = element.getBoundingClientRect();
         const top = rect.top;
 
-        if(top <= window.innerHeight / 0.75) {
+        if(top <= window.innerHeight / 1) {
             element.classList.add('animate');
         }
     });

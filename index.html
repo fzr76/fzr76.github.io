@@ -115,7 +115,37 @@
       </div>
       <div id="About">
         <h1>About Me</h1>
+        <p>
+          Hey there! I'm [Your Name], and I've been immersed in the 
+          exciting world of electronics repair for over 8 years. 
+          Throughout my journey in the industry, I've gained extensive 
+          experience fixing all kinds of mobile devices and computers. 
+          Solving software issues has been an integral part of my work, 
+          which ultimately ignited my passion for web development.
+        </p>
+        <p>
+          The allure of frontend design and the endless possibilities 
+          of creating captivating animations fascinate me. Crafting 
+          visually appealing and user-friendly interfaces is where I 
+          find true joy. Every pixel matters, and I love exploring 
+          innovative ways to make websites come alive.
+        </p>
       </div>
+    </div>
+    <div id="footer">
+      <h2>Contact Us</h2>
+      <form action="Resources/PHP/process_form.php" method="post">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+          
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+          
+          <button type="submit">Submit</button>
+      </form>
     </div>
     <script src="Resources/JS/loadScreen.js"></script>
     <script src="Resources/JS/scrollTransform.js"></script>

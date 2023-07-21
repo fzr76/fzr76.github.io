@@ -225,6 +225,19 @@ nav a:active {
     margin-top: 2rem;
 }
 
+#footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    margin: 2rem;
+    background-color: orange;
+    height: 80vh;
+    border-radius: 50px;
+}
+
 /* This section is for the loading overlay screen */
 
 #overlay {
