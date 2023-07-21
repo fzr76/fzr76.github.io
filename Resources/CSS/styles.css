@@ -232,10 +232,72 @@ nav a:active {
     align-items: center;
     text-align: center;
     padding: 2rem;
-    margin: 2rem;
     background-color: orange;
-    height: 80vh;
-    border-radius: 50px;
+    height: 85vh;
+    width: 100%;
+    animation: slideInFromLeft 2s forwards;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 80%;
+}
+
+#contact-form input,
+#contact-form textarea {
+    color: white;
+    background-color: #333;
+    margin: 1rem;
+    border: 4px solid black;
+    border-radius: 30px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease; 
+    width: 50%;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+    border-color: white;
+}
+
+#contact-form input {
+    text-align: center;
+    padding: 10px;
+}
+
+#contact-form textarea {
+    padding: 20px;
+    resize: none;
+    height: 30vh;
+}
+
+#contact-form button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 100px;
+    padding: 20px;
+    border-radius: 30px;
+    color: white;
+    background-color: #333;
+    border: 4px solid black;
+    transition: all 0.3s;
+}
+
+#contact-form button:hover {
+    border-color: white;
+}
+
+#contact-form button:active {
+    background-color: black;
+    color: orange;
+    border-color: white;
 }
 
 /* This section is for the loading overlay screen */
