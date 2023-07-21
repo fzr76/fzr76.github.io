@@ -1,3 +1,5 @@
+HTML:
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,13 +18,11 @@
       <a href="#Tools">Tools I Use</a>
       <a href="#About">About Me</a>
     </div>
-    <a href="#logo">
-      <button class="top-anchor" id="top">
-        <div class="arrowbar1"></div>
-        <div class="arrowbar2"></div>
-        <div class="arrowbar3"></div>
-      </button>
-    </a>
+    <button class="top-anchor" id="top">
+      <div class="arrowbar1"></div>
+      <div class="arrowbar2"></div>
+      <div class="arrowbar3"></div>
+    </button>
     <div class="logo-container" id="logo">
       <picture>
         <source srcset="Resources/Images/memojiWithMac.webp" type="image/webp">
@@ -67,7 +67,7 @@
       </div>
     </div>
     <div id="Content">
-      <div id="Projects" class="contentElement">
+      <div id="Projects">
         <h1>My Projects</h1>
       </div>
       <div class="project-box">
@@ -111,7 +111,45 @@
     <script src="Resources/JS/loadScreen.js"></script>
     <script src="Resources/JS/scrollTransform.js"></script>
     <script src="Resources/JS/hamburgerMenu.js"></script>
-    <script src="Resources/JS/slideInContent.js"></script>
   </body>
 
 </html>
+
+CSS:
+
+#Content {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    font-family: 'Permanent Marker';
+    color: white;
+}
+
+.project-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Courier New', monospace;
+    min-width: 300px;
+    width: 40vw;
+    height: 40vh;
+    margin: 4rem;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: orange;
+    color: black;
+}
+
+.project-box:nth-of-type(odd) {
+    background-color: #333;
+    color: white;
+}
+
+I would like to have a slide in from left side of screen animation when I scroll to each div inside of the content div

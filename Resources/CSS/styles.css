@@ -32,6 +32,37 @@ html {
     color: white;
 }
 
+#Content > * {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+#Content > .animate {
+    animation: slideInFromLeft 1s forwards;
+}
+
+.project-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Courier New', monospace;
+    min-width: 300px;
+    width: 40vw;
+    height: 40vh;
+    margin: 4rem;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: orange;
+    color: black;
+}
+
+.project-box:nth-of-type(odd) {
+    background-color: #333;
+    color: white;
+}
+
 .top-anchor {
     position: fixed;
     display: flex;
@@ -72,28 +103,6 @@ html {
     background-color: orange;
     transform: translate(-10px, -16px) rotate(45deg);
     border-radius: 15px;
-}
-
-.project-box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-family: 'Courier New', monospace;
-    min-width: 300px;
-    width: 40vw;
-    height: 40vh;
-    margin: 4rem;
-    padding: 15px;
-    border-radius: 15px;
-    background-color: orange;
-    color: black;
-}
-
-.project-box:nth-of-type(odd) {
-    background-color: #333;
-    color: white;
 }
 
 nav {
