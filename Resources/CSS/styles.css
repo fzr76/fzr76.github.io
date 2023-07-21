@@ -14,6 +14,21 @@ html {
     background-color: black;
 }
 
+#mobileTopBlur {
+    position: fixed;
+    top: 0;
+    left: -110%;
+    height: 6vh;
+    width: 100%;
+    background-color: rgba(51, 51, 51, 0.5);
+    backdrop-filter: blur(8px);
+    z-index: 500;
+}
+
+#mobileTopBlur.show {
+    left: 0;
+}
+
 #main-section {
     width: 100%;
     height: 50%;
@@ -113,9 +128,8 @@ html {
     align-items: center;
     text-align: center;
     background-color: #333;
-    height: 50vh;
+    height: auto;
     width: 100%;
-    padding-inline: 8rem;
 }
 
 nav {
@@ -145,6 +159,10 @@ nav a:active {
     color: black;
     background-color: orange;
     box-shadow: 0 0 40px 40px rgb(255, 165, 0);
+}
+
+.navbar.show {
+    left: 0;
 }
 
 @font-face {
@@ -245,9 +263,8 @@ nav a:active {
     text-align: center;
     padding: 2rem;
     background-color: orange;
-    height: 85vh;
+    height: auto;
     width: 100%;
-    animation: slideInFromLeft 2s forwards;
 }
 
 #contact-form {
@@ -257,6 +274,8 @@ nav a:active {
     align-items: center;
     text-align: center;
     width: 80%;
+    font-family: 'fasthand';
+    font-size: 25px;
 }
 
 #contact-form input,
@@ -269,7 +288,7 @@ nav a:active {
     font-size: 16px;
     outline: none;
     transition: border-color 0.3s ease; 
-    width: 50%;
+    width: 100%;
 }
 
 #contact-form input:focus,
@@ -285,7 +304,7 @@ nav a:active {
 #contact-form textarea {
     padding: 20px;
     resize: none;
-    height: 30vh;
+    height: 20vh;
 }
 
 #contact-form button {
@@ -299,7 +318,6 @@ nav a:active {
     color: white;
     background-color: #333;
     border: 4px solid black;
-    /* transition: all 0.3s; */
 }
 
 #contact-form button:hover {
@@ -310,6 +328,21 @@ nav a:active {
     background-color: black;
     color: orange;
     border-color: white;
+}
+
+:root {
+    --bar-width: 60px;
+    --bar-height: 8px;
+    --hamburger-gap: 6px;
+    --foreground: white;
+    --background: orange;
+    --hamburger-margin: 8px;
+    --animation-timing: 400ms ease-in-out;
+    --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+}
+.hamburger-menu.active {
+    --foreground: orange;
+    --background: white;
 }
 
 /* This section is for the loading overlay screen */
@@ -420,6 +453,10 @@ nav a:active {
         width: 100%;
     }
 
+    #mobileTopBlur {
+        display: none;
+    }
+
     #Projects {
         margin-top: 20rem;
     }
@@ -525,6 +562,10 @@ nav a:active {
         display: none;
     }
 
+    #About {
+        padding-inline: 8rem;
+    }
+
     /* Styles for when scrolling down */
 
     .navbar {
@@ -536,8 +577,8 @@ nav a:active {
         align-items: center;
         width: 100%;
         height: 10vh;
-        /* padding-inline: 8rem; */
-        background-color: #333;
+        background-color: rgba(51, 51, 51, 0.5);
+        backdrop-filter: blur(8px);
         transition: left 1s ease-in-out;
         z-index: 999;
     }
@@ -545,17 +586,20 @@ nav a:active {
     .navbar a {
         text-align: center;
         color: white;
-        margin-inline: 2rem;
+        margin-inline: 5rem;
         padding-inline: 7px;
         font-family: 'fasthand';
-        font-size: 2rem;
+        font-size: 1.5rem;
         box-shadow: 0 0 5px 5px rgb(255, 165, 0);
         border-radius: 15px;
         text-decoration: none;
     }
 
-    .navbar.show {
-        left: 0;
+    .navbar a:hover {
+        color: black;
+        background-color: orange;
+        box-shadow: 0 0 15px 15px rgb(255, 165, 0);
+        transition: background-color 0.5s ease;
     }
 
     @keyframes slideIn {
@@ -597,6 +641,10 @@ nav a:active {
         left: 0;
         height: 100%;
         width: 100%;
+    }
+
+    #mobileTopBlur {
+        display: none;
     }
 
     #Projects {
@@ -703,6 +751,10 @@ nav a:active {
         display: none;
     }
 
+    #About {
+        padding-inline: 8rem;
+    }
+
     /* Styles for when scrolling down */
 
     .navbar {
@@ -714,8 +766,8 @@ nav a:active {
         align-items: center;
         width: 100%;
         height: 10vh;
-        /* padding-inline: 8rem; */
-        background-color: #333;
+        background-color: rgba(51, 51, 51, 0.5);
+        backdrop-filter: blur(8px);
         transition: left 1s ease-in-out;
         z-index: 999;
     }
@@ -723,17 +775,20 @@ nav a:active {
     .navbar a {
         text-align: center;
         color: white;
-        margin-inline: 2rem;
+        margin-inline: 5rem;
         padding-inline: 7px;
         font-family: 'fasthand';
-        font-size: 2rem;
+        font-size: 1.5rem;
         box-shadow: 0 0 5px 5px rgb(255, 165, 0);
         border-radius: 15px;
         text-decoration: none;
     }
 
-    .navbar.show {
-        left: 0;
+    .navbar a:hover {
+        color: black;
+        background-color: orange;
+        box-shadow: 0 0 15px 15px rgb(255, 165, 0);
+        transition: background-color 0.5s ease;
     }
 
     @keyframes slideIn {
@@ -816,18 +871,11 @@ nav a:active {
         display: none;
     }
 
-    /* Hamburger Menu Code for mobile devices */
-
-    :root {
-        --bar-width: 60px;
-        --bar-height: 8px;
-        --hamburger-gap: 6px;
-        --foreground: #333;
-        --background: orange;
-        --hamburger-margin: 8px;
-        --animation-timing: 400ms ease-in-out;
-        --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+    #About {
+        padding-inline: 2rem;
     }
+
+    /* Hamburger Menu Code for mobile devices */
 
     .hamburger-menu {
         --x-width: calc(var(--hamburger-height) * 1.41421356237);
@@ -840,11 +888,6 @@ nav a:active {
         left: var(--hamburger-margin);
         z-index: 999;
         cursor: pointer;
-    }
-
-    .hamburger-menu.active {
-        --foreground: orange;
-        --background: #333;
     }
 
     .hamburger-menu::before,
@@ -895,7 +938,7 @@ nav a:active {
         transition: transform var(--animation-timing);
         padding: 0.5rem 1rem;
         padding-top: calc(var(--hamburger-height) + var(--hamburger-margin) + 1rem);
-        background-color: var(--foreground);
+        background-color: #333;
         color: var(--background);
         min-width: 100vw;
         min-height: 100vh;
@@ -977,18 +1020,11 @@ nav a:active {
         display: none;
     }
 
-    /* Hamburger Menu Code for mobile devices */
-
-    :root {
-        --bar-width: 60px;
-        --bar-height: 8px;
-        --hamburger-gap: 6px;
-        --foreground: #333;
-        --background: orange;
-        --hamburger-margin: 8px;
-        --animation-timing: 400ms ease-in-out;
-        --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+    #About {
+        padding-inline:2rem;
     }
+
+    /* Hamburger Menu Code for mobile devices */
 
     .hamburger-menu {
         --x-width: calc(var(--hamburger-height) * 1.41421356237);
@@ -1001,11 +1037,6 @@ nav a:active {
         left: var(--hamburger-margin);
         z-index: 999;
         cursor: pointer;
-    }
-
-    .hamburger-menu.active {
-        --foreground: orange;
-        --background: #333;
     }
 
     .hamburger-menu::before,
@@ -1056,7 +1087,7 @@ nav a:active {
         transition: transform var(--animation-timing);
         padding: 0.5rem 1rem;
         padding-top: calc(var(--hamburger-height) + var(--hamburger-margin) + 1rem);
-        background-color: var(--foreground);
+        background-color: #333;
         color: var(--background);
         min-width: 100vw;
         min-height: 100vh;
@@ -1138,18 +1169,11 @@ nav a:active {
         display: none;
     }
 
-    /* Hamburger Menu Code for mobile devices */
-
-    :root {
-        --bar-width: 60px;
-        --bar-height: 8px;
-        --hamburger-gap: 6px;
-        --foreground: #333;
-        --background: orange;
-        --hamburger-margin: 8px;
-        --animation-timing: 400ms ease-in-out;
-        --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+    #About {
+        padding-inline: 2rem;
     }
+
+    /* Hamburger Menu Code for mobile devices */
 
     .hamburger-menu {
         --x-width: calc(var(--hamburger-height) * 1.41421356237);
@@ -1162,11 +1186,6 @@ nav a:active {
         left: var(--hamburger-margin);
         z-index: 999;
         cursor: pointer;
-    }
-
-    .hamburger-menu.active {
-        --foreground: orange;
-        --background: #333;
     }
 
     .hamburger-menu::before,
@@ -1217,7 +1236,7 @@ nav a:active {
         transition: transform var(--animation-timing);
         padding: 0.5rem 1rem;
         padding-top: calc(var(--hamburger-height) + var(--hamburger-margin) + 1rem);
-        background-color: var(--foreground);
+        background-color: #333;
         color: var(--background);
         min-width: 100vw;
         min-height: 100vh;
