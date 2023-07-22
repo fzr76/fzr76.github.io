@@ -41,11 +41,11 @@
         </form>
 
         <script>
-            document.getElementById('consultation-form').addEventListener('submit', function (event) {
+            document.getElementById('consultation-form').addEventListener('submit', function(event) {
                 event.preventDefault();
-
+        
                 let formData = new FormData(this);
-
+        
                 fetch(this.action, {
                     method: 'POST',
                     body: formData,
@@ -54,18 +54,16 @@
                     }
                 }).then(response => {
                     if (response.ok) {
-                        return response.json();
+                        alert('Form successfully submitted');
+                        this.reset();
                     } else {
                         throw new Error('Network response was not ok.');
                     }
-                }).then(data => {
-                    alert('Form successfully submitted');
-                    this.reset();
                 }).catch(error => {
                     alert('There has been a problem with your fetch operation: ' + error.message);
                 });
             });
-        </script>
+        </script>        
     </body>
 
 </html>
