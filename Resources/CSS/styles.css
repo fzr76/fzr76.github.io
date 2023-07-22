@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+#hide-me {
+    text-decoration: none;
+}
+
 html {
     scroll-behavior: smooth;
     height: 100%;
