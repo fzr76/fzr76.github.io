@@ -41,6 +41,7 @@ html {
 
 #mobileTopBlur.show {
     left: 0;
+    animation: slideInFromLeft 2s forwards;
 }
 
 #main-section {
@@ -94,15 +95,15 @@ html {
 
 .top-anchor {
     position: fixed;
-    display: flex;
+    display: block;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     bottom: 0;
     right: 0;
     margin: 1rem;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     background-color: #555;
     border: none;
     border-radius: 50%;
@@ -111,27 +112,27 @@ html {
 }
 
 .arrowbar1 {
-    width: 30px;
-    height: 5px;
+    width: 15px;
+    height: 3px;
     background-color: orange;
-    transform: translate(9px, 6px) rotate(45deg);
+    transform: translate(4px, 3px) rotate(45deg);
     border-radius: 15px;
 }
 
 .arrowbar2 {
-    width: 40px;
-    height: 5px;
+    width: 23px;
+    height: 3px;
     background-color: orange;
-    transform: translate(0, 13px) rotate(90deg);
+    transform: translate(-0.4px, 9px) rotate(90deg);
     border-radius: 15px;
     
 }
 
 .arrowbar3 {
-    width: 5px;
-    height: 30px;
+    width: 3px;
+    height: 15px;
     background-color: orange;
-    transform: translate(-10px, -16px) rotate(45deg);
+    transform: translate(-5px, -9px) rotate(45deg);
     border-radius: 15px;
 }
 
@@ -144,6 +145,10 @@ html {
     background-color: #333;
     height: auto;
     width: 100%;
+}
+
+#About p {
+    font-family: 'Courier New', monospace;
 }
 
 nav {
