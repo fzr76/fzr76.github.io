@@ -180,6 +180,15 @@ html {
     width: 100%;
 }
 
+.me-logo {
+    height: auto;
+    width: 300px;
+    margin: 1rem;
+    background-color: black;
+    border-radius: 50%;
+    filter: grayscale(100%);
+}
+
 #About p {
     font-family: 'Courier New', monospace, sans-serif;
 }
@@ -351,6 +360,7 @@ nav a:active {
 #contact-form input {
     text-align: center;
     padding: 10px;
+    caret-color: orange;
 }
 
 #contact-form textarea {
