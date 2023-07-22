@@ -8,6 +8,16 @@
     text-decoration: none;
 }
 
+#hide-me a:link {
+    color: inherit;
+    text-decoration: none;
+    cursor: default;
+}
+
+#hide-me a:visited {
+    color: inherit
+}
+
 html {
     scroll-behavior: smooth;
     height: 100%;
