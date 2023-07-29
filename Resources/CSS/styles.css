@@ -88,6 +88,10 @@ html {
     color: black;
 }
 
+.project-box p {
+    margin-bottom: 0.5rem;
+}
+
 .project-box:nth-of-type(odd) {
     background-color: #333;
     color: white;
