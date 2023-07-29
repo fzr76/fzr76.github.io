@@ -79,6 +79,7 @@ html {
     text-align: center;
     font-family: 'Courier New', monospace, sans-serif;
     min-width: 300px;
+    min-height: 320px;
     width: 40vw;
     height: 40vh;
     margin: 4rem;
@@ -86,10 +87,6 @@ html {
     border-radius: 15px;
     background-color: orange;
     color: black;
-}
-
-.project-box p {
-    margin-bottom: 0.5rem;
 }
 
 .project-box:nth-of-type(odd) {
