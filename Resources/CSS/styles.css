@@ -568,16 +568,21 @@ nav a:active {
 
     .diagonal-column2 {
         display: flex;
+        place-items: center;
         justify-content: center;
         align-items: center;
         text-align: center;
         width: 100%;
-        height: 50%;
+        padding: 2rem;
         transform: skewY(20deg) translate3d(-100%, -100%, 0);
         transition: transform 2s;
         animation: slideIn 2s forwards;
         background-color: #333;
         overflow: hidden;
+    }
+
+    .diagonal-column2 > * {
+        min-height: 100%;
     }
 
     .diag-content {
@@ -639,7 +644,7 @@ nav a:active {
         justify-content: center;
         align-items: center;
         width: 100%;
-        height: 10vh;
+        min-height: 70px;
         background-color: rgba(51, 51, 51, 0.5);
         backdrop-filter: blur(8px);
         transition: left 1s ease-in-out;
@@ -762,7 +767,7 @@ nav a:active {
         align-items: center;
         text-align: center;
         width: 100%;
-        height: 50%;
+        padding: 2rem;
         transform: skewY(20deg) translate3d(-100%, -100%, 0);
         animation: slideIn 2s forwards;
         background-color: #333;
@@ -828,7 +833,7 @@ nav a:active {
         justify-content: center;
         align-items: center;
         width: 100%;
-        height: 10vh;
+        min-height: 70px;
         background-color: rgba(51, 51, 51, 0.5);
         backdrop-filter: blur(8px);
         transition: left 1s ease-in-out;
