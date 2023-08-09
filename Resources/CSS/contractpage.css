@@ -3,6 +3,7 @@ html, body {
     width: 100%;
     background-color: darkgray;
     margin: 0;
+    overflow-x: hidden;
 }
 
 #pdf-container {
