@@ -15,7 +15,9 @@
 }
 
 #hide-me a:visited {
-    color: inherit
+    color: inherit;
+    text-decoration: none;
+    cursor: default;
 }
 
 html {

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Website Contract</title>
+        <link rel="stylesheet" href="/Resources/CSS/contractpage.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.11.1/pdf-lib.min.js"></script>
+    </head>
+
+    <body>
+        <div id="pdf-container">
+            <iframe src="/Resources/PDF/Website Development Contract.pdf"></iframe>
+        </div>
+        <div id="signature-container">
+            <label for="signature">Sign here:</label>
+            <canvas id="signature"></canvas>
+            <button id="clear-signature">Clear Signature</button>
+            <button id="save-signature">Save Signature</button>
+        </div>
+
+        <script>
+            const signatureCanvas = document.getElementById('signature');
+            const clearButton = document.getElementById('clear-signature');
+            const saveButton = document.getElementById('save-signature');
+
+            const canvasContext = signatureCanvas.getContext('2d');
+            canvasContext.lineWidth = 2;
+            let isDrawing = false;
+
+            // Event listeners for signature canvas
+            signatureCanvas.addEventListener('mousedown', () => {
+                isDrawing = true;
+            });
+            signatureCanvas.addEventListener('mousemove', draw);
+            signatureCanvas.addEventListener('mouseup', () => {
+                isDrawing = false;
+            });
+            clearButton.addEventListener('click', clearSignature);
+            saveButton.addEventListener('click', saveSignature);
+
+            // Function to draw on the canvas
+            function draw(event) {
+                if (!isDrawing) return;
+                canvasContext.lineTo(event.clientX - signatureCanvas.getBoundingClientRect().left, event.clientY - signatureCanvas.getBoundingClientRect().top);
+                canvasContext.stroke();
+            }
+
+            // Function to clear the signature canvas
+            function clearSignature() {
+                canvasContext.clearRect(0, 0, signatureCanvas.width, signatureCanvas.height);
+            }
+
+            // Function to save the signature
+            async function saveSignature() {
+                const signatureDataURL = signatureCanvas.toDataURL();
+
+                // Fetch your PDF
+                const existingPdfBytes = await fetch('/Resources/PDF/Website Development Contract.pdf').then(res => res.arrayBuffer());
+
+                // Load a PDF with the PDF-lib library
+                const pdfDoc = await PDFLib.PDFDocument.load(existingPdfBytes);
+
+                // Embed the PNG image bytes (you can also embed JPEGs)
+                const pngImage = await pdfDoc.embedPng(signatureDataURL);
+
+                // Get the fifth page. Remember that pages are 0-indexed.
+                const page = pdfDoc.getPages()[3];
+
+                const pageWidth = page.getWidth();
+                const signatureWidth = signatureCanvas.width;
+                const signatureHeight = signatureCanvas.height;
+
+                // Calculate x position for centering the image at the bottom
+                const xPosition = (pageWidth - signatureWidth) / 2;
+                const yPosition = 0; // Keeping it at the bottom
+
+                // Draw the png image on the fifth page at the calculated position
+                page.drawImage(pngImage, {
+                    x: xPosition,
+                    y: yPosition,
+                    width: signatureWidth,
+                    height: signatureHeight,
+                });
+
+                // Serialize the PDF to bytes (Uint8Array)
+                const pdfBytes = await pdfDoc.save();
+
+                // Trigger the download
+                const blob = new Blob([pdfBytes], { type: 'application/pdf' });
+                const link = document.createElement('a');
+                link.href = URL.createObjectURL(blob);
+                link.download = 'Contract_with_Signature.pdf';
+                link.click();
+            }
+
+
+        </script>
+    </body>
+
+</html>
