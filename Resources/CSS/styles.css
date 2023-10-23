@@ -477,6 +477,36 @@ nav a:active {
     background-color: #333;
 }
 
+.video-link {
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: orange;
+    border-radius: 25px;
+    border: 2px solid black;
+    padding: 7px;
+    margin-top: 5px;
+}
+
+.video-link:hover {
+    color: orange;
+    background-color: black;
+    border: 2px solid orange;
+}
+
+.video-link:visited {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.Bluecut-Image {
+    width: 150px;
+    height: 150px;
+    max-width: 150px;
+    max-width: 150px;
+    border-radius: 15px;
+}
+
 /**
  * Basic CSS Media Query Template
  * -------------------------------------------------------
